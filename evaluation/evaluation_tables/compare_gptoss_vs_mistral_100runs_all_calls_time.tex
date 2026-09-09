@@ -1,0 +1,38 @@
+\begin{table}[H]
+\centering
+\scriptsize
+\begingroup
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{clrrrr|rrrr|rrrr}
+ &  & \multicolumn{4}{c}{\textbf{GPT-OSS}} & \multicolumn{4}{c}{\textbf{Mistral}} & \multicolumn{4}{c}{\textbf{GPT-5.4 Mini}} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-10}\cmidrule(lr){11-14}
+\textbf{Setup} & \textbf{Test Case} & \textbf{\shortstack{Avg.\\Tokens}} & \textbf{\shortstack{Tool\\Calls}} & \textbf{\shortstack{Time\\(s)}} & \textbf{\shortstack{Success\\Rate}} & \textbf{\shortstack{Avg.\\Tokens}} & \textbf{\shortstack{Tool\\Calls}} & \textbf{\shortstack{Time\\(s)}} & \textbf{\shortstack{Success\\Rate}} & \textbf{\shortstack{Avg.\\Tokens}} & \textbf{\shortstack{Tool\\Calls}} & \textbf{\shortstack{Time\\(s)}} & \textbf{\shortstack{Success\\Rate}} \\
+\midrule
+\multirow{6}{*}{\rotatebox[origin=c]{90}{\textbf{MCP}}} & List buildings & 10\,500 & 2.03 & 33.3 & 85\% & 13\,267 & 2.88 & 7.3 & 98\% & 9\,278 & 2.05 & 15.6 & 100\% \\
+ & Highest height & 17\,419 & 2.09 & 35.2 & 100\% & 22\,186 & 2.03 & 3.5 & 94\% & 14\,899 & 2.32 & 17.6 & 99\% \\
+ & Raise building & 16\,205 & 3.92 & 73.8 & 88\% & 14\,648 & 3.27 & 5.7 & 8\% & 21\,280 & 5.28 & 36.9 & 100\% \\
+ & Add building & 20\,192 & 5.02 & 92.9 & 96\% & 59\,279 & 5.46 & 10.2 & 100\% & 21\,972 & 4.27 & 44.1 & 99\% \\
+ & Party walls & 10\,006 & 2.04 & 27 & 98\% & 19\,397 & 2 & 3.8 & 100\% & 9\,716 & 2 & 14.7 & 88\% \\
+ & \textbf{Setup avg.} & \textbf{14\,865} & \textbf{3.02} & \textbf{52.4} & \textbf{93\%} & \textbf{25\,755} & \textbf{3.13} & \textbf{6.1} & \textbf{80\%} & \textbf{15\,429} & \textbf{3.18} & \textbf{25.8} & \textbf{97\%} \\
+\midrule
+\multirow{6}{*}{\rotatebox[origin=c]{90}{\textbf{No Tools}}} & List buildings & 63\,577 & 0 & 31.8 & 1\% & 81\,106 & 0 & 8.7 & 0\% & 62\,405 & 0 & 24.2 & 18\% \\
+ & Highest height & 62\,818 & 0 & 33.6 & 96\% & 80\,244 & 0 & 1 & 70\% & 62\,333 & 0 & 22.9 & 100\% \\
+ & Raise building & 60\,700 & 0 & 21.4 & 99\% & 80\,136 & 0 & 1.7 & 96\% & 60\,788 & 0 & 8.2 & 99\% \\
+ & Add building & 62\,878 & 0 & 36.4 & 5\% & 81\,527 & 0 & 24.6 & 0\% & 75\,408 & 0 & 169.3 & 86\% \\
+ & Party walls & 60\,968 & 0 & 19.9 & 0\% & 80\,152 & 0 & 0.8 & 2\% & 98\,461 & 0 & 414.6 & 1\% \\
+ & \textbf{Setup avg.} & \textbf{62\,188} & \textbf{0} & \textbf{28.6} & \textbf{40\%} & \textbf{80\,633} & \textbf{0} & \textbf{7.4} & \textbf{34\%} & \textbf{71\,879} & \textbf{0} & \textbf{127.8} & \textbf{61\%} \\
+\midrule
+\multirow{6}{*}{\rotatebox[origin=c]{90}{\textbf{Sandbox}}} & List buildings & 219\,167 & 2.45 & 114.6 & 44\% & 82\,253 & 0 & 11.3 & 0\% & 83\,146 & 0.32 & 28.5 & 29\% \\
+ & Highest height & 223\,802 & 2.6 & 107.5 & 67\% & 81\,448 & 0 & 4.4 & 57\% & 91\,489 & 0.46 & 27 & 100\% \\
+ & Raise building & 226\,108 & 2.63 & 111 & 50\% & 81\,994 & 0 & 16.5 & 91\% & 122\,487 & 1 & 16.3 & 99\% \\
+ & Add building & 190\,270 & 2.03 & 108.7 & 8\% & 90\,534 & 0 & 198.3 & 2\% & 138\,873 & 1 & 185.4 & 91\% \\
+ & Party walls & 324\,671 & 4.13 & 162.5 & 0\% & 81\,357 & 0 & 4.1 & 1\% & 152\,520 & 1 & 329 & 1\% \\
+ & \textbf{Setup avg.} & \textbf{236\,803} & \textbf{2.77} & \textbf{120.9} & \textbf{34\%} & \textbf{83\,517} & \textbf{0} & \textbf{46.9} & \textbf{30\%} & \textbf{117\,703} & \textbf{0.76} & \textbf{117.2} & \textbf{64\%} \\
+\midrule
+\textbf{Total} & \textbf{All Test Cases} & \textbf{104\,619} & \textbf{1.93} & \textbf{67.3} & \textbf{56\%} & \textbf{63\,302} & \textbf{1.04} & \textbf{20.1} & \textbf{48\%} & \textbf{68\,337} & \textbf{1.31} & \textbf{90.3} & \textbf{74\%} \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{table}
+

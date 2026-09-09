@@ -1,0 +1,365 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{22.05.2026, 16:19 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & mistralai-mistral-small-4-119b \\
+Reasoning Effort & -- \\
+Date & 22.05.2026, 16:19 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{Combined Results - Multiple Setups}
+
+When testing multiple setups simultaneously, only average results across all setups are shown.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Overall Average Metrics per Setup and Test Case (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19) **: Fuer add\_building gilt eine strenge Erfolgsdefinition: nur Runs mit gleichzeitig erfuellten Checks CJ, Imp, Geo und Disp werden als korrekt gewertet.}
+\begin{tabular}{l l r r r r r r}
+\toprule
+Setup & Test Case & Runs & Avg Dur. (ms) & Average Input Tokens & Average Output Tokens & Avg Calls & Success Rate \\
+\midrule
+code\_interpreter & list\_buildings & 1 & 42\,216 & 574\,849 & 2\,091 & 6 & 0\% \\
+code\_interpreter & highest\_measured\_height & 1 & 26\,707 & 491\,581 & 676 & 5 & 0\% \\
+code\_interpreter & roof\_volume\_sum & 1 & 33\,311 & 658\,725 & 1\,379 & 7 & 0\% \\
+code\_interpreter & raise\_building\_by\_id & 1 & 96\,359 & 575\,103 & 8\,533 & 6 & 100\% \\
+code\_interpreter & add\_building & 1 & 55\,586 & 578\,886 & 3\,792 & 6 & 0\%** \\
+\midrule
+mcp & list\_buildings & 1 & 6\,896 & 13\,653 & 655 & 5 & 0\% \\
+mcp & highest\_measured\_height & 1 & 2\,622 & 18\,124 & 70 & 2 & 100\% \\
+mcp & roof\_volume\_sum & 1 & 10\,316 & 28\,557 & 1\,170 & 39 & 0\% \\
+mcp & raise\_building\_by\_id & 1 & 3\,334 & 9\,411 & 158 & 2 & 0\% \\
+mcp & add\_building & 1 & 7\,955 & 22\,294 & 805 & 5 & 0\% \\
+\midrule
+no\_tools & list\_buildings & 1 & 10\,174 & 80\,073 & 1\,188 & 0 & 0\% \\
+no\_tools & highest\_measured\_height & 1 & 4\,141 & 80\,102 & 39 & 0 & 100\% \\
+no\_tools & roof\_volume\_sum & 1 & 5\,366 & 80\,102 & 180 & 0 & 0\% \\
+no\_tools & raise\_building\_by\_id & 1 & 5\,647 & 79\,977 & 193 & 0 & 0\% \\
+no\_tools & add\_building & 1 & 13\,494 & 80\,220 & 1\,222 & 0 & 0\%** \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{list\_buildings}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{list\_buildings - Average Metrics per Setup (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\label{tab:combined\_list\_buildings\_metrics\_20260522}
+\begin{tabular}{l r r r r r r}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Average Input Tokens & Average Output Tokens & Total Tok. & Success Rate \\
+\midrule
+code\_interpreter & 1 & 42\,216 & 574\,849 & 2\,091 & 576\,940 & 0\% \\
+mcp & 1 & 6\,896 & 13\,653 & 655 & 14\,308 & 0\% \\
+no\_tools & 1 & 10\,174 & 80\,073 & 1\,188 & 81\,261 & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{list\_buildings - Detailed Runs Comparison (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l r}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & OK \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & Total: 36 & -- \\
+\midrule
+code\_interpreter & None & 42\,216 & 576\,940 & 574\,849 & 2\,091 & \$0.1479 & 6 & Error & False \\
+\midrule
+mcp & None & 6\,896 & 14\,308 & 13\,653 & 655 & \$0.0047 & 5 & Error & False \\
+\midrule
+no\_tools & None & 10\,174 & 81\,261 & 80\,073 & 1\,188 & \$0.0224 & 0 & Total: 41 & False \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{list\_buildings - Expected vs Actual (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & Total: 36 buildings & -- \\
+\midrule
+code\_interpreter & Total: 51 buildings & 0\% \\
+mcp & Total: 37 buildings & 0\% \\
+no\_tools & Total: 41 buildings & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{highest\_measured\_height}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{highest\_measured\_height - Average Metrics per Setup (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\label{tab:combined\_highest\_measured\_height\_metrics\_20260522}
+\begin{tabular}{l r r r r r r}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Average Input Tokens & Average Output Tokens & Total Tok. & Success Rate \\
+\midrule
+code\_interpreter & 1 & 26\,707 & 491\,581 & 676 & 492\,257 & 0\% \\
+mcp & 1 & 2\,622 & 18\,124 & 70 & 18\,194 & 100\% \\
+no\_tools & 1 & 4\,141 & 80\,102 & 39 & 80\,141 & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{highest\_measured\_height - Detailed Runs Comparison (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l r}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & OK \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 19.124m & -- \\
+\midrule
+code\_interpreter & None & 26\,707 & 492\,257 & 491\,581 & 676 & \$0.1242 & 5 & ...e3ad, 19.261m & False \\
+\midrule
+mcp & None & 2\,622 & 18\,194 & 18\,124 & 70 & \$0.0047 & 2 & Error & True \\
+\midrule
+no\_tools & None & 4\,141 & 80\,141 & 80\,102 & 39 & \$0.0201 & 0 & ...1p9r, 19.124m & True \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{highest\_measured\_height - Expected vs Actual (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & ID: DENW39AL10001p9r, Height: 19.124m & -- \\
+\midrule
+code\_interpreter & ID: UUID\_c5eaf410-c5bf-45b9-a2bc-52998749e3ad, Height: 19.261m & 0\% \\
+mcp & ID: DENW39AL10001p9r, Height: 19.124m & 100\% \\
+no\_tools & ID: DENW39AL10001p9r, Height: 19.124m & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{roof\_volume\_sum}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{roof\_volume\_sum - Average Metrics per Setup (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\label{tab:combined\_roof\_volume\_sum\_metrics\_20260522}
+\begin{tabular}{l r r r r r r}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Average Input Tokens & Average Output Tokens & Total Tok. & Success Rate \\
+\midrule
+code\_interpreter & 1 & 33\,311 & 658\,725 & 1\,379 & 660\,104 & 0\% \\
+mcp & 1 & 10\,316 & 28\,557 & 1\,170 & 29\,727 & 0\% \\
+no\_tools & 1 & 5\,366 & 80\,102 & 180 & 80\,282 & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{roof\_volume\_sum - Detailed Runs Comparison (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l r}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & OK \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & 407.725 m³ & -- \\
+\midrule
+code\_interpreter & None & 33\,311 & 660\,104 & 658\,725 & 1\,379 & \$0.1674 & 7 & 17147.1 m³ & False \\
+\midrule
+mcp & None & 10\,316 & 29\,727 & 28\,557 & 1\,170 & \$0.0095 & 39 & 587.7250000000001 m³ & False \\
+\midrule
+no\_tools & None & 5\,366 & 80\,282 & 80\,102 & 180 & \$0.0204 & 0 & 9331.686 m³ & False \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{roof\_volume\_sum - Expected vs Actual (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & Sum: 407.725 m³ & -- \\
+\midrule
+code\_interpreter & Sum: 17147.1 m³ & 0\% \\
+mcp & Sum: 587.7250000000001 m³ & 0\% \\
+no\_tools & Sum: 9331.686 m³ & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{raise\_building\_by\_id}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{raise\_building\_by\_id - Average Metrics per Setup (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\label{tab:combined\_raise\_building\_by\_id\_metrics\_20260522}
+\begin{tabular}{l r r r r r r r r l}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Average Input Tokens & Average Output Tokens & Total Tok. & Mod-Dataset OK & Loadable (Imp) & Usable Mods & Assessment \\
+\midrule
+code\_interpreter & 1 & 96\,359 & 575\,103 & 8\,533 & 583\,636 & 100\% & 1/1 & 1/1 & Alle Aenderungen nutzbar \\
+mcp & 1 & 3\,334 & 9\,411 & 158 & 9\,569 & 0\% & 1/1 & 0/1 & Aenderungen nicht nutzbar \\
+no\_tools & 1 & 5\,647 & 79\,977 & 193 & 80\,170 & 0\% & -- & -- & Keine Integritaetsdaten \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{raise\_building\_by\_id - Detailed Runs Comparison (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l c}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & Mod-Dataset OK \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & DENW39AL100023tX, 3.553m & -- \\
+\midrule
+code\_interpreter & None & 96\,359 & 583\,636 & 575\,103 & 8\,533 & \$0.1608 & 6 & ...23tX, 3.553m & \checkmark \\
+\midrule
+mcp & None & 3\,334 & 9\,569 & 9\,411 & 158 & \$0.0027 & 2 & ...23tX, 1.553m & \textcolor{red}{\(\times\)} \\
+\midrule
+no\_tools & None & 5\,647 & 80\,170 & 79\,977 & 193 & \$0.0204 & 0 & ...23tX, N/Am & \textcolor{red}{\(\times\)} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{raise\_building\_by\_id - Expected vs Actual (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & ID: DENW39AL100023tX, New Height: 3.553m & -- \\
+\midrule
+code\_interpreter & ID: DENW39AL100023tX, New Height: 3.553m & 100\% \\
+mcp & ID: DENW39AL100023tX, New Height: 1.553m & 0\% \\
+no\_tools & ID: DENW39AL100023tX, New Height: 1.553m & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{add\_building}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{add\_building - Average Metrics per Setup (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19) **: Strenge Bewertungsregel fuer add\_building: Ein Run zaehlt nur dann als erfolgreich, wenn alle vier Integritaets-Checks (CJ=CityJSON valide, Imp=mit citydpc importierbar, Geo=Geometrie konsistent, Disp=Gebaeude darstellbar) gleichzeitig erfuellt sind. Beim Code Interpreter wurden in 2 Runs zwar Objekte erzeugt und im Datensatz sichtbar, diese erfuellten jedoch nicht die vollstaendigen Integritaetskriterien.}
+\label{tab:combined\_add\_building\_metrics\_20260522}
+\begin{tabular}{l r r r r r r r r l}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Average Input Tokens & Average Output Tokens & Total Tok. & Mod-Dataset OK & Loadable (Imp) & Usable Mods & Assessment \\
+\midrule
+code\_interpreter & 1 & 55\,586 & 578\,886 & 3\,792 & 582\,678 & 0\%** & 0/1 & 0/1 & Aenderungen nicht nutzbar (oft nicht ladbar/gueltig) \\
+mcp & 1 & 7\,955 & 22\,294 & 805 & 23\,099 & 0\% & 1/1 & 0/1 & Aenderungen nicht nutzbar (oft nicht ladbar/gueltig) \\
+no\_tools & 1 & 13\,494 & 80\,220 & 1\,222 & 81\,442 & 0\%** & 0/1 & 0/1 & Aenderungen nicht nutzbar (oft nicht ladbar/gueltig) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{add\_building - Detailed Runs Comparison (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l c}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & Mod-Dataset OK \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & EVAL\_TEST\_BUILDING\_001, 10.5m & -- \\
+\midrule
+code\_interpreter & None & 55\,586 & 582\,678 & 578\,886 & 3\,792 & \$0.1523 & 6 & ...\_001, 10.5m & \textcolor{red}{\(\times\)} \\
+\midrule
+mcp & None & 7\,955 & 23\,099 & 22\,294 & 805 & \$0.0072 & 5 & ...\_001, N/Am & \textcolor{red}{\(\times\)} \\
+\midrule
+no\_tools & None & 13\,494 & 81\,442 & 80\,220 & 1\,222 & \$0.0225 & 0 & ...\_001, N/Am & \textcolor{red}{\(\times\)} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{add\_building - Expected vs Actual (mistralai-mistral-small-4-119b, --, 22.05.2026 16:19)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & ID: EVAL\_TEST\_BUILDING\_001, Height: 10.5m & -- \\
+\midrule
+code\_interpreter & ID: EVAL\_TEST\_BUILDING\_001, Height: 10.5m & 0\% \\
+mcp & ID: EVAL\_TEST\_BUILDING\_001, Height: N/Am & 0\% \\
+no\_tools & ID: EVAL\_TEST\_BUILDING\_001, Height: N/Am & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

@@ -1,0 +1,379 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{13.05.2026, 16:58 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & mistralai-mistral-small-4-119b \\
+Reasoning Effort & high \\
+Date & 13.05.2026, 16:58 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{mcp}
+
+\subsection{list\_buildings}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Metrics (2026-05-13)}
+\label{tab:mcp\_list\_buildings\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 36 buildings & -- \\
+\hline
+1 & 7\,052 & 3\,388 & 2\,774 & 614 & \$0.0019 & 3 & 36 buildings & True \\
+2 & 3\,225 & 2\,855 & 2\,774 & 81 & \$0.0009 & 3 & N/A & False \\
+3 & 7\,016 & 3\,494 & 2\,774 & 720 & \$0.0021 & 3 & 36 buildings & True \\
+4 & 10\,335 & 5\,779 & 4\,650 & 1\,129 & \$0.0034 & 5 & 36 buildings & True \\
+5 & 8\,086 & 3\,612 & 2\,774 & 838 & \$0.0024 & 3 & 36 buildings & True \\
+\hline
+Average. & 7\,142 & 3\,825 & 3\,149 & 676 & \$0.0021 & 3 & 36 buildings & -- \\
+Total & -- & 19\,128 & 15\,746 & 3\,382 & \$0.0107 & 17 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Outputs (2026-05-13)}
+\label{tab:mcp\_list\_buildings\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & Гледа\{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq... \\
+2 & \{CITYJSON\_RESPONSE\} \\
+3 & \{
+  "building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq",... \\
+4 &  กรก\{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq"... \\
+5 & \{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq", "D... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{highest\_measured\_height}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Metrics (2026-05-13)}
+\label{tab:mcp\_highest\_measured\_height\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 19.124m & -- \\
+\hline
+1 & 4\,608 & 2\,558 & 2\,233 & 325 & \$0.0012 & 2 & DENW39AL10001p9r, 19.124m & True \\
+2 & 5\,084 & 2\,625 & 2\,233 & 392 & \$0.0013 & 2 & DENW39AL10001p9r, 19.124m & True \\
+3 & 5\,885 & 3\,669 & 3\,119 & 550 & \$0.0019 & 3 & DENW39AL10001p9r, 19.124m & True \\
+4 & 4\,924 & 2\,625 & 2\,233 & 392 & \$0.0013 & 2 & DENW39AL10001p9r, 19.124m & True \\
+5 & 3\,465 & 2\,341 & 2\,233 & 108 & \$0.0008 & 2 & DENW39AL10001p9r, 19.124m & True \\
+\hline
+Average. & 4\,793 & 2\,763 & 2\,410 & 353 & \$0.0013 & 2 & DENW39AL10001p9r, 19.124m & -- \\
+Total & -- & 13\,818 & 12\,051 & 1\,767 & \$0.0065 & 11 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Outputs (2026-05-13)}
+\label{tab:mcp\_highest\_measured\_height\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & eneuve\{"building\_id":"DENW39AL10001p9r","measuredHeight":19.124,"missing\_count":5\} \\
+2 & ```json
+\{"building\_id": "DENW39AL10001p9r", "measuredHeight": 19.124, "missing\_count": 5\}
+``` \\
+3 & \{"building\_id": "DENW39AL10001p9r", "measuredHeight": 19.124, "missing\_count": 5\} \\
+4 & 衆国\{"building\_id": "DENW39AL10001p9r", "measuredHeight": 19.124, "missing\_count": 5\} \\
+5 &  ژوئ\{"building\_id": "DENW39AL10001p9r", "measuredHeight": 19.124, "missing\_count": 5\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{roof\_volume\_sum}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Metrics (2026-05-13)}
+\label{tab:mcp\_roof\_volume\_sum\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 407.725 m³ & -- \\
+\hline
+1 & 3\,755 & 2\,498 & 2\,292 & 206 & \$0.0010 & 2 & 407725 m³ & False \\
+2 & 3\,712 & 2\,473 & 2\,292 & 181 & \$0.0009 & 2 & 407.725 m³ & True \\
+3 & 5\,000 & 3\,548 & 3\,193 & 355 & \$0.0015 & 3 & 407.725 m³ & True \\
+4 & 1\,952 & 719 & 664 & 55 & \$0.0003 & 0 & N/A & False \\
+5 & 50\,472 & 10\,015 & 2\,292 & 7\,723 & \$0.0160 & 2 & 407.725 m³ & True \\
+\hline
+Average. & 12\,978 & 3\,850 & 2\,146 & 1\,704 & \$0.0039 & 1 & 407.725 m³ & -- \\
+Total & -- & 19\,253 & 10\,733 & 8\,520 & \$0.0197 & 9 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Outputs (2026-05-13)}
+\label{tab:mcp\_roof\_volume\_sum\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & fonie\{"roof\_volume\_sum\_m3": 407725, "definition": "Die summierte Gesamtmenge der Dachvolumina aller Gebäude im Dataset, berechnet als Summe der pro Gebäude mit CityDPC ermittelten Dachvolumina in Kubikmetern.", "counted\_objects": 36\} \\
+2 & ikuuta\{
+  "roof\_volume\_sum\_m3": 407.725,
+  "definition": "Summe der pro Gebäude mit CityDPC berechneten Dachvolumina. Gebäude ohne explizite Dachvolumenangabe wurden nicht berücksichtigt.",
+  "counted\_objects": 7
+\} \\
+3 & žne\{
+  "roof\_volume\_sum\_m3": 407.725,
+  "definition": "Die Summe der Dachvolumina wurde aus dem aktiven Dataset berechnet. Dabei wurden nur Gebäude berücksichtigt, für die ein gültiges Dachvolumen (RoofVolume) in den CityJSON-Attributen vorhanden war. Die Berechnung erfolgte pro Gebäude durch Multiplikation der Grundfläche mit der durchschnittlichen Höhe des Gebäudes.",
+  "counted\_objects": 7
+\} \\
+4 &  propriéteis\{"filename": "evaluation\_\_13.05\_16-58\_mistralai-mistral-small-4-119b\_high\_\_mcp\_\_roof\_volume\_sum\_\_run\_004.city.json"\} \\
+5 & \{"roof\_volume\_sum\_m3": 407.725, "definition": "Summe der pro Gebaeude mit CityDPC berechneten Dachvolumina.", "counted\_objects": 7\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{raise\_tallest\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Metrics (2026-05-13)}
+\label{tab:mcp\_raise\_tallest\_building\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 21.124m & -- \\
+\hline
+1 & 9\,856 & 7\,353 & 6\,460 & 893 & \$0.0034 & 3 & DENW39AL10001p9r, 21.124m & True \\
+2 & 13\,574 & 15\,026 & 13\,541 & 1\,485 & \$0.0064 & 9 & DENW39AL10001p9r, 21.124m & True \\
+3 & 6\,719 & 7\,040 & 6\,468 & 572 & \$0.0028 & 3 & DENW39AL10001p9r, 21.124m & True \\
+4 & 6\,598 & 9\,186 & 8\,672 & 514 & \$0.0032 & 4 & DENW39AL10001p9r, 21.124m & True \\
+5 & 6\,715 & 7\,284 & 6\,698 & 586 & \$0.0028 & 4 & DENW39AL10001p9r, 21.124m & True \\
+\hline
+Average. & 8\,692 & 9\,177 & 8\,367 & 810 & \$0.0037 & 4 & DENW39AL10001p9r, 21.124m & -- \\
+Total & -- & 45\,889 & 41\,839 & 4\,050 & \$0.0186 & 23 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Outputs (2026-05-13)}
+\label{tab:mcp\_raise\_tallest\_building\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \#\#\# Modifikation erfolgreich durchgeführt
+
+- **Building-ID**: `DENW39AL10001p9r`
+- **Alte measuredHeight**: 19.124m
+- **Neue measuredHeight**: 21.124m
+- **Änderung erfolgreich im Dataset gespeichert**: ✅ Ja \\
+2 & \#\#\# Durchgeführte Änderung:
+
+**Building-ID:** `DENW39AL10001p9r`
+
+- **Alte measuredHeight:** 19.124 m
+- **Neue measuredHeight:** 21.124 m
+
+✅ Die Änderung wurde erfolgreich im Dataset gespeichert. \\
+3 & ่า\#\#\# Bestätigung der durchgeführten Änderung
+
+- **Building-ID des modifizierten Gebäudes:** `DENW39AL10001p9r`
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Erfolgreiche Speicherung:** Ja – Die Änderung wurde erfolgreich im Dataset gespeichert. \\
+4 & eneuve erfolgreich durchgeführt und gespeichert:
+
+- **Building-ID:** `DENW39AL10001p9r`
+- **Alte measuredHeight:** `19.124m`
+- **Neue measuredHeight:** `21.124m`
+- **Änderung erfolgreich gespeichert:** Ja \\
+5 & zyć\#\#\# Änderung erfolgreich durchgeführt
+
+- **Building-ID:** `DENW39AL10001p9r`
+- **Alte measuredHeight:** `19.124m`
+- **Neue measuredHeight:** `21.124m`
+- **Änderung gespeichert:** Ja \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{add\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Metrics (2026-05-13)}
+\label{tab:mcp\_add\_building\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & EVAL\_TEST\_BUILDING\_001 & -- \\
+\hline
+1 & 13\,712 & 14\,137 & 12\,622 & 1\,515 & \$0.0062 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+2 & 9\,328 & 13\,575 & 12\,628 & 947 & \$0.0051 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+3 & 19\,885 & 28\,708 & 26\,396 & 2\,312 & \$0.0112 & 8 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+4 & 17\,253 & 20\,768 & 19\,005 & 1\,763 & \$0.0083 & 6 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+5 & 13\,770 & 23\,840 & 22\,551 & 1\,289 & \$0.0082 & 7 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+\hline
+Average. & 14\,789 & 20\,205 & 18\,640 & 1\,565 & \$0.0078 & 5 & EVAL\_TEST\_BUILDING\_001 & -- \\
+Total & -- & 101\,028 & 93\,202 & 7\,826 & \$0.0390 & 29 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Outputs (2026-05-13)}
+\label{tab:mcp\_add\_building\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \#\#\# Zusammenfassung des erstellten Gebäudes
+
+**Building-ID:**
+`EVAL\_TEST\_BUILDING\_001`
+
+**Attribute:**
+- **measuredHeight:** 10.5 m
+- **storeysAboveGround:** 3
+- **roofType:** 1030 (Satteldach)
+- **function:** 31001\_1010 (Wohngebäude)
+
+**Erfolgreich zum Dataset hinzugefügt und gespeichert!**
+✅ Das Gebäude wurde erfolgreich erstellt, angereichert und im Dataset `evaluation\_\_13.05\_16-58\_mistralai-mistral-small-4-119b\_high\_\_mcp\_\_add\_building\_\_run\_001.city.json` gespeichert (37 Gebäude). \\
+2 & \textbackslashResponse nach der Ausführung der Befehle:
+
+---
+\#\#\# **Zusammenfassung des erstellten Gebäudes:**
+- **Building-ID:** `EVAL\_TEST\_BUILDING\_001`
+- **Gebäudehöhe (measuredHeight):** `10.5m`
+- **Stockwerke über Grund (storeysAboveGround):** `3`
+- **Dachtyp (roofType):** `1030` (Satteldach)
+- **Funktion (function):** `31001\_1010` (Wohngebäude)
+
+---
+\#\#\# **Bestätigung:**
+✅ **Gebäude erfolgreich erstellt und zum Dataset hinzugefügt.**
+✅ **Dataset wurde gespeichert** (`evaluation\_\_13.05\_16-58\_mistralai-mis... \\
+3 & \#\#\# Zusammenfassung des erstellten Gebäudes
+
+- **Building-ID:** `EVAL\_TEST\_BUILDING\_001`
+- **Attribute:**
+  - `measuredHeight`: 10.5m
+  - `storeysAboveGround`: 3
+  - `roofType`: 1030 (Satteldach)
+  - `function`: 31001\_1010 (Wohngebäude)
+  - `roofHeight`: 3.0m
+- **Erfolgreich zum Dataset hinzugefügt und gespeichert:** ✅
+  - Das Gebäude wurde mit allen spezifizierten Attributen erstellt.
+  - Das Dataset `evaluation\_\_13.05\_16-58\_mistralai-mistral-small-4-119b\_high\_\_mcp\_\_add\_building\_\_run\_003.city.j... \\
+4 & ---
+\#\#\# **Zusammenfassung des erstellten Gebäudes**
+
+- **Building-ID:** `EVAL\_TEST\_BUILDING\_001`
+- **Gebäudehöhe (measuredHeight):** `10.5m`
+- **Stockwerke über Grund (storeysAboveGround):** `3`
+- **Dachtyp (roofType):** `1030` (Satteldach)
+- **Funktion:** `31001\_1010` (Wohngebäude)
+
+---
+\#\#\# **Bestätigung der erfolgreichen Erstellung und Speicherung**
+✅ Das Gebäude `EVAL\_TEST\_BUILDING\_001` wurde erfolgreich zum Dataset hinzugefügt und gespeichert.
+- **Anzahl Gebäude im Dataset:** 37
+- **Dateipfa... \\
+5 & ---
+\#\#\# **Zusammenfassung des erstellten Gebäudes**
+
+- **Building-ID:** `EVAL\_TEST\_BUILDING\_001`
+- **measuredHeight:** 10.5m
+- **storeysAboveGround:** 3
+- **roofType:** 1030 (Satteldach)
+- **function:** 31001\_1010 (Wohngebäude)
+
+---
+\#\#\# **Bestätigung der erfolgreichen Erstellung und Speicherung**
+- **Gebäude erfolgreich zum Dataset hinzugefügt.**
+- **Dataset gespeichert in:**
+  `evaluation\_\_13.05\_16-58\_mistralai-mistral-small-4-119b\_high\_\_mcp\_\_add\_building\_\_run\_005.city.json`
+  *(Aktuelle Gebäud... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

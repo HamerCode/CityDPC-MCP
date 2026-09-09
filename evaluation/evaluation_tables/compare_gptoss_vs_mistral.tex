@@ -1,0 +1,34 @@
+\begin{table}[H]
+\centering
+\scriptsize
+\textbf{Run A: 04.06\_12-13\_gpt-oss-120b\_high\_completions} \quad \textbf{Run B: 04.06\_11-55\_mistralai-mistral-small-4-119b\_high\_completions}
+\[4pt]
+\textbf{GPT-OSS} \quad \textbf{Mistral}
+\[2pt]
+\begin{tabular}{llrr|rr}
+\toprule
+ &  & \multicolumn{2}{c}{GPT-OSS} & \multicolumn{2}{c}{Mistral} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Setup & Test Case & Avg Tok. & Success Rate & Avg Tok. & Success Rate \\
+\midrule
+Code Interpreter & list\_buildings & 285\,597 & 40\% & 82\,450 & 0\% \\
+Code Interpreter & highest\_measured\_height & 285\,234 & 80\% & 81\,448 & 80\% \\
+Code Interpreter & raise\_building\_by\_id & 160\,412 & 80\% & 81\,328 & 100\% \\
+Code Interpreter & add\_building & 188\,456 & 0\% & 96\,767 & 0\% \\
+Code Interpreter & count\_party\_walls & 350\,885 & 0\% & 81\,357 & 0\% \\
+MCP & list\_buildings & 187\,398 & 80\% & 13\,562 & 100\% \\
+MCP & highest\_measured\_height & 135\,287 & 100\% & 18\,437 & 100\% \\
+MCP & raise\_building\_by\_id & 390\,303 & 80\% & 14\,582 & 20\% \\
+MCP & add\_building & 18\,926 & 100\% & 27\,096 & 100\% \\
+MCP & count\_party\_walls & 68\,971 & 100\% & 12\,406 & 100\% \\
+No Tools & list\_buildings & 63\,641 & 20\% & 81\,111 & 0\% \\
+No Tools & highest\_measured\_height & 63\,344 & 100\% & 80\,242 & 100\% \\
+No Tools & raise\_building\_by\_id & 60\,719 & 100\% & 80\,120 & 100\% \\
+No Tools & add\_building & 62\,111 & 0\% & 81\,331 & 0\% \\
+No Tools & count\_party\_walls & 60\,894 & 0\% & 80\,152 & 20\% \\
+\midrule
+\textbf{Total} & \textbf{All Test Cases} & 158\,812 & 59\% & 60\,826 & 55\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+

@@ -1,0 +1,25 @@
+\section*{Reasoning-Effort Vergleich (MCP)}
+\textbf{Run A:} 07.02\_15-30\_gpt-5-mini\_medium (gpt-5-mini (medium)) \quad \textbf{Run B:} 07.02\_19-32\_gpt-5-mini\_minimal (gpt-5-mini (minimal)) \quad \textbf{Setup:} mcp
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{l|rrrr|rrrr}
+\toprule
+& \multicolumn{4}{c|}{gpt-5-mini (medium)} & \multicolumn{4}{c}{gpt-5-mini (minimal)} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Test Case & Success Rate (\%) & Avg Dur. (ms) & Total Tok. & Tool Usage Eff. (\%) & Success Rate (\%) & Avg Dur. (ms) & Total Tok. & Tool Usage Eff. (\%) \\
+\midrule
+list\_buildings & \textbf{95.0} & 18111 & 77003 & \textbf{94.7} & \textbf{95.0} & 9201 & 66182 & \textbf{97.4} \\
+highest\_measured\_height & \textbf{100.0} & 26643 & 206760 & \textbf{95.2} & \textbf{100.0} & 8063 & 216856 & \textbf{91.2} \\
+roof\_volume\_sum & \textbf{100.0} & 61337 & 149068 & \textbf{100.0} & \textbf{0.0} & 48837 & 196241 & \textbf{84.3} \\
+raise\_tallest\_building & \textbf{100.0} & 34885 & 127078 & \textbf{82.9} & \textbf{100.0} & 10446 & 82140 & \textbf{78.4} \\
+add\_building & \textbf{100.0} & 27251 & 125041 & \textbf{95.2} & \textbf{100.0} & 13420 & 85476 & \textbf{85.1} \\
+\midrule
+\textbf{Total} & \textbf{99.0} & \textbf{33646} & \textbf{684950} & \textbf{97.5} & \textbf{79.0} & \textbf{17993} & \textbf{646895} & \textbf{84.7} \\
+\bottomrule
+\end{tabular}
+}
+\caption{Vergleich der Aufgabenerfuellung nach Reasoning-Effort (je Test Case) mit zwei Hauptspalten fuer beide Modellkonfigurationen.}
+\end{table}

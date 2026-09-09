@@ -1,0 +1,324 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{07.02.2026, 14:16 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & gpt-5-mini \\
+Reasoning Effort & low \\
+Date & 07.02.2026, 14:16 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{Combined Results - Multiple Setups}
+
+When testing multiple setups simultaneously, only average results across all setups are shown.
+
+\subsection{list\_buildings}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{list\_buildings - Average Metrics per Setup (gpt-5-mini, low, 07.02.2026 14:16)}
+\label{tab:combined\_list\_buildings\_metrics\_20260207}
+\begin{tabular}{l r r r r r r}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Avg Tok. & Total Tok. & Avg Cost (\$) & Success Rate \\
+\midrule
+mcp & 3 & 13\,191 & 3\,591 & 10\,774 & \$0.0019 & 100\% \\
+no\_tools & 2 & 12\,657 & 61\,315 & 122\,631 & \$0.0170 & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{list\_buildings - Detailed Runs Comparison (gpt-5-mini, low, 07.02.2026 14:16)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l r}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & OK \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & Total: 36 & -- \\
+\midrule
+mcp & 1 & 13\,619 & 3\,821 & 3\,142 & 679 & \$0.0021 & 4 & Total: 36 & True \\
+mcp & 1 & 10\,945 & 3\,508 & 2\,937 & 571 & \$0.0019 & 3 & Total: 36 & True \\
+mcp & 2 & 15\,011 & 3\,445 & 2\,903 & 542 & \$0.0018 & 3 & Total: 36 & True \\
+\midrule
+no\_tools & 1 & 11\,799 & 61\,264 & 60\,380 & 884 & \$0.0169 & 0 & Total: 36 & True \\
+no\_tools & 2 & 13\,515 & 61\,367 & 60\,380 & 987 & \$0.0171 & 0 & Total: 36 & True \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{list\_buildings - Expected vs Actual (gpt-5-mini, low, 07.02.2026 14:16)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & Total: 36 buildings & -- \\
+\midrule
+mcp & Total: 36 buildings & 100\% \\
+no\_tools & Total: 36 buildings & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{highest\_measured\_height}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{highest\_measured\_height - Average Metrics per Setup (gpt-5-mini, low, 07.02.2026 14:16)}
+\label{tab:combined\_highest\_measured\_height\_metrics\_20260207}
+\begin{tabular}{l r r r r r r}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Avg Tok. & Total Tok. & Avg Cost (\$) & Success Rate \\
+\midrule
+mcp & 2 & 11\,638 & 9\,728 & 19\,456 & \$0.0035 & 100\% \\
+no\_tools & 2 & 15\,133 & 61\,523 & 123\,046 & \$0.0173 & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{highest\_measured\_height - Detailed Runs Comparison (gpt-5-mini, low, 07.02.2026 14:16)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l r}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & OK \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 19.124m & -- \\
+\midrule
+mcp & 1 & 9\,089 & 9\,564 & 9\,144 & 420 & \$0.0031 & 3 & ...1p9r, 19.124m & True \\
+mcp & 2 & 14\,188 & 9\,892 & 9\,116 & 776 & \$0.0038 & 3 & ...1p9r, 19.124m & True \\
+\midrule
+no\_tools & 1 & 13\,030 & 61\,241 & 60\,419 & 822 & \$0.0167 & 0 & ...1p9r, 19.124m & True \\
+no\_tools & 2 & 17\,237 & 61\,805 & 60\,419 & 1\,386 & \$0.0179 & 0 & ...1p9r, 19.124m & True \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{highest\_measured\_height - Expected vs Actual (gpt-5-mini, low, 07.02.2026 14:16)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & ID: DENW39AL10001p9r, Height: 19.124m & -- \\
+\midrule
+mcp & ID: DENW39AL10001p9r, Height: 19.124m & 100\% \\
+no\_tools & ID: DENW39AL10001p9r, Height: 19.124m & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{roof\_volume\_sum}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{roof\_volume\_sum - Average Metrics per Setup (gpt-5-mini, low, 07.02.2026 14:16)}
+\label{tab:combined\_roof\_volume\_sum\_metrics\_20260207}
+\begin{tabular}{l r r r r r r}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Avg Tok. & Total Tok. & Avg Cost (\$) & Success Rate \\
+\midrule
+mcp & 2 & 51\,141 & 6\,388 & 12\,777 & \$0.0044 & 100\% \\
+no\_tools & 2 & 10\,045 & 61\,084 & 122\,168 & \$0.0165 & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{roof\_volume\_sum - Detailed Runs Comparison (gpt-5-mini, low, 07.02.2026 14:16)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l r}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & OK \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & 407.725 m³ & -- \\
+\midrule
+mcp & 1 & 50\,838 & 6\,404 & 4\,832 & 1\,572 & \$0.0044 & 39 & 407.725 m³ & True \\
+mcp & 2 & 51\,445 & 6\,373 & 4\,725 & 1\,648 & \$0.0045 & 38 & 407.725 m³ & True \\
+\midrule
+no\_tools & 1 & 10\,018 & 60\,924 & 60\,409 & 515 & \$0.0161 & 0 & 0 m³ & False \\
+no\_tools & 2 & 10\,073 & 61\,244 & 60\,409 & 835 & \$0.0168 & 0 & 50000.0 m³ & False \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{roof\_volume\_sum - Expected vs Actual (gpt-5-mini, low, 07.02.2026 14:16)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & Sum: 407.725 m³ & -- \\
+\midrule
+mcp & Sum: 407.725 m³ & 100\% \\
+no\_tools & Sum: 0 m³ & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{raise\_tallest\_building}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{raise\_tallest\_building - Average Metrics per Setup (gpt-5-mini, low, 07.02.2026 14:16)}
+\label{tab:combined\_raise\_tallest\_building\_metrics\_20260207}
+\begin{tabular}{l r r r r r r r}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Avg Tok. & Total Tok. & Avg Cost (\$) & Success & Integrity \\
+\midrule
+mcp & 2 & 14\,194 & 4\,461 & 8\,923 & \$0.0023 & 100\% & CJ:2/2 Imp:0/2 Geo:0/2 Disp:0/2 \\
+no\_tools & 2 & 5\,949 & 60\,942 & 121\,885 & \$0.0159 & 100\% & CJ:2/2 Imp:0/2 Geo:0/2 Disp:0/2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{raise\_tallest\_building - Detailed Runs Comparison (gpt-5-mini, low, 07.02.2026 14:16)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l r l}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & OK & Integrity \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 21.124m & -- & -- \\
+\midrule
+mcp & 1 & 12\,716 & 4\,316 & 3\,754 & 562 & \$0.0021 & 7 & ...1p9r, 21.124m & True & CJ \textcolor{red}{Imp} \\
+mcp & 2 & 15\,672 & 4\,607 & 3\,828 & 779 & \$0.0025 & 6 & ...1p9r, 21.124m & True & CJ \textcolor{red}{Imp} \\
+\midrule
+no\_tools & 1 & 6\,653 & 60\,907 & 60\,565 & 342 & \$0.0158 & 0 & ...1p9r, 21.124m & True & CJ \textcolor{red}{Imp} \\
+no\_tools & 2 & 5\,245 & 60\,978 & 60\,565 & 413 & \$0.0160 & 0 & ...1p9r, 21.124m & True & CJ \textcolor{red}{Imp} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{raise\_tallest\_building - Expected vs Actual (gpt-5-mini, low, 07.02.2026 14:16)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & ID: DENW39AL10001p9r, New Height: 21.124m & -- \\
+\midrule
+mcp & ID: DENW39AL10001p9r, New Height: 21.124m & 100\% \\
+no\_tools & ID: DENW39AL10001p9r, New Height: 21.124m & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection{add\_building}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{add\_building - Average Metrics per Setup (gpt-5-mini, low, 07.02.2026 14:16)}
+\label{tab:combined\_add\_building\_metrics\_20260207}
+\begin{tabular}{l r r r r r r r}
+\toprule
+Setup & Runs & Avg Dur. (ms) & Avg Tok. & Total Tok. & Avg Cost (\$) & Success & Integrity \\
+\midrule
+mcp & 2 & 15\,632 & 4\,664 & 9\,328 & \$0.0027 & 100\% & CJ:2/2 Imp:0/2 Geo:2/2 Disp:0/2 \\
+no\_tools & 2 & 25\,529 & 62\,554 & 125\,108 & \$0.0187 & 100\% & CJ:2/2 Imp:0/2 Geo:2/2 Disp:0/2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{add\_building - Detailed Runs Comparison (gpt-5-mini, low, 07.02.2026 14:16)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r l r l}
+\toprule
+Setup & Run & Dur. & Tok. & In & Out & Cost & Calls & Result & OK & Integrity \\
+\midrule
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & -- & EVAL\_TEST\_BUILDING\_001, 10.5m & -- & -- \\
+\midrule
+mcp & 1 & 15\,576 & 4\,744 & 3\,800 & 944 & \$0.0028 & 5 & ...\_001, 10.5m & True & CJ \textcolor{red}{Imp} Geo \textcolor{red}{Disp} \\
+mcp & 2 & 15\,689 & 4\,584 & 3\,785 & 799 & \$0.0025 & 5 & ...\_001, 10.5m & True & CJ \textcolor{red}{Imp} Geo \textcolor{red}{Disp} \\
+\midrule
+no\_tools & 1 & 21\,427 & 62\,336 & 60\,830 & 1\,506 & \$0.0182 & 0 & ...\_001, 10.5m & True & CJ \textcolor{red}{Imp} Geo \textcolor{red}{Disp} \\
+no\_tools & 2 & 29\,631 & 62\,772 & 60\,830 & 1\,942 & \$0.0191 & 0 & ...\_001, 10.5m & True & CJ \textcolor{red}{Imp} Geo \textcolor{red}{Disp} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{add\_building - Expected vs Actual (gpt-5-mini, low, 07.02.2026 14:16)}
+\begin{tabular}{l l l}
+\toprule
+Setup & Extracted Value & Accuracy \\
+\midrule
+\textbf{Ground Truth} & ID: EVAL\_TEST\_BUILDING\_001, Height: 10.5m & -- \\
+\midrule
+mcp & ID: EVAL\_TEST\_BUILDING\_001, Height: 10.5m & 100\% \\
+no\_tools & ID: EVAL\_TEST\_BUILDING\_001, Height: 10.5m & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

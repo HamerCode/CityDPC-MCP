@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\caption{Tool-Call-Effizienz fuer den MCP-Setup-Run \texttt{07.02\_11-46\_gpt-5-mini\_medium} (20 Runs pro Testfall)}
+\label{tab:tool_call_efficiency_mcp_07_02_11_46}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\hline
+Test Case & Runs & Avg Calls & Median Calls & Order OK (\%) & Params OK (\%) & Both OK (\%) & Extra Tools (\%) \\
+\hline
+add\_building & 20 & 4.85 & 5.0 & 35.0 & 100.0 & 35.0 & 65.0 \\
+highest\_measured\_height & 20 & 2.95 & 3.0 & 90.0 & 100.0 & 90.0 & 0.0 \\
+list\_buildings & 20 & 2.85 & 3.0 & 90.0 & 95.0 & 90.0 & 0.0 \\
+raise\_tallest\_building & 20 & 6.00 & 6.0 & 100.0 & 95.0 & 95.0 & 90.0 \\
+roof\_volume\_sum & 20 & 38.95 & 39.0 & 100.0 & 100.0 & 100.0 & 0.0 \\
+\hline
+\end{tabular}
+}
+\end{table}

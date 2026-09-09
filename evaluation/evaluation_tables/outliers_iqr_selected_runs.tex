@@ -1,0 +1,49 @@
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{l l l l l}
+\toprule
+Run & Setup & Test Case & Metrik & Ausreißer (Run:Wert) \\
+\midrule
+cityjson\_1530 & code\_interpreter & add\_building & duration\_ms & 6:300003, 9:300007, 12:300002, 14:300009 \\
+cityjson\_1530 & code\_interpreter & add\_building & total\_tokens & 10:82228 \\
+cityjson\_1530 & code\_interpreter & highest\_measured\_height & duration\_ms & 1:300010, 5:300004, 13:300003, 17:300005 \\
+cityjson\_1530 & code\_interpreter & roof\_volume\_sum & total\_tokens & 16:153564 \\
+cityjson\_1530 & mcp & add\_building & total\_tokens & 20:5400 \\
+cityjson\_1530 & mcp & highest\_measured\_height & duration\_ms & 4:183116 \\
+cityjson\_1530 & mcp & list\_buildings & duration\_ms & 8:35229, 16:3792 \\
+cityjson\_1530 & mcp & list\_buildings & total\_tokens & 16:2976 \\
+cityjson\_1530 & mcp & raise\_tallest\_building & duration\_ms & 2:22171 \\
+cityjson\_1530 & mcp & raise\_tallest\_building & total\_tokens & 2:4533 \\
+cityjson\_1530 & mcp & roof\_volume\_sum & total\_tokens & 3:7749, 9:7951, 12:7889 \\
+cityjson\_1530 & no\_tools & add\_building & duration\_ms & 9:131316, 10:300006, 12:98717, 17:29425 \\
+cityjson\_1530 & no\_tools & highest\_measured\_height & duration\_ms & 4:55445 \\
+cityjson\_1530 & no\_tools & list\_buildings & duration\_ms & 17:35041 \\
+cityjson\_1530 & no\_tools & list\_buildings & total\_tokens & 6:62201, 17:62597 \\
+cityjson\_1530 & no\_tools & roof\_volume\_sum & total\_tokens & 3:76010 \\
+cityjson\_1932 & mcp & highest\_measured\_height & duration\_ms & 2:14922 \\
+cityjson\_1932 & mcp & highest\_measured\_height & total\_tokens & 2:17161, 3:15935, 6:16315, 20:16287 \\
+cityjson\_1932 & mcp & list\_buildings & total\_tokens & 2:3396, 10:3046, 11:3302, 17:3396, 19:3302 \\
+cityjson\_1932 & mcp & raise\_tallest\_building & duration\_ms & 3:13350 \\
+cityjson\_1932 & mcp & raise\_tallest\_building & total\_tokens & 2:3919, 3:4390, 10:3919, 13:3914, 16:4423, 18:3916, 20:4310 \\
+cityjson\_1932 & mcp & roof\_volume\_sum & duration\_ms & 4:14544, 6:61539 \\
+citygml\_1802 & code\_interpreter\_citygml & add\_building & duration\_ms & 4:99481 \\
+citygml\_1802 & code\_interpreter\_citygml & highest\_measured\_height & duration\_ms & 3:300001, 5:300008 \\
+citygml\_1802 & code\_interpreter\_citygml & highest\_measured\_height & total\_tokens & 2:182665, 6:173120 \\
+citygml\_1802 & code\_interpreter\_citygml & list\_buildings & duration\_ms & 1:300046, 5:23518, 9:60076 \\
+citygml\_1802 & code\_interpreter\_citygml & list\_buildings & total\_tokens & 9:177625 \\
+citygml\_1802 & code\_interpreter\_citygml & raise\_tallest\_building & total\_tokens & 8:188777 \\
+citygml\_1802 & code\_interpreter\_citygml & roof\_volume\_sum & total\_tokens & 5:176750 \\
+citygml\_1802 & mcp\_citygml & add\_building & duration\_ms & 1:63742 \\
+citygml\_1802 & mcp\_citygml & add\_building & total\_tokens & 1:18354 \\
+citygml\_1802 & mcp\_citygml & raise\_tallest\_building & duration\_ms & 2:65590 \\
+citygml\_1802 & mcp\_citygml & raise\_tallest\_building & total\_tokens & 10:15485 \\
+citygml\_1802 & mcp\_citygml & roof\_volume\_sum & duration\_ms & 8:72258, 10:74439 \\
+citygml\_1802 & mcp\_citygml & roof\_volume\_sum & total\_tokens & 10:8448 \\
+citygml\_1802 & no\_tools\_citygml & add\_building & duration\_ms & 1:37444, 5:37925 \\
+citygml\_1802 & no\_tools\_citygml & highest\_measured\_height & duration\_ms & 1:300046 \\
+citygml\_1802 & no\_tools\_citygml & roof\_volume\_sum & total\_tokens & 3:171445, 5:172039 \\
+\bottomrule
+\end{tabular}
+\caption{Ausreißer nach IQR-Regel (Q1-1.5*IQR, Q3+1.5*IQR) für Dauer und Token.}
+\end{table}

@@ -1,0 +1,16 @@
+[project]
+name = "mcp-server"
+version = "0.1.0"
+description = "CityDPC tools for CityJSON and CityGML through the Model Context Protocol"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "citydpc",
+    "fastmcp==2.14.3",
+    "mcp[cli]>=1.23.1",
+]
+
+[tool.uv.sources]
+citydpc = { path = "../CityDPC", editable = true }
+[tool.uv]
+link-mode = "copy"

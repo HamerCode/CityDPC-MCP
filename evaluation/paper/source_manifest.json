@@ -1,0 +1,230 @@
+{
+  "sources": [
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/mcp/add_building.json",
+      "sha256": "1132e167d7a9ed1d5d9c8ca21a4f937adf2abe212e0603a50b70d1338f6360d6",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/mcp/count_party_walls.json",
+      "sha256": "75ca5ad00907fa17478750da061ce7b7f151146f8eb132e37af245158a8f1aa9",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/mcp/highest_measured_height.json",
+      "sha256": "86fce0c1059c3bef518174fe3fdbb1d61dccfae92dd5d90da166cdf9a027dbfe",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/mcp/list_buildings.json",
+      "sha256": "fa152150597009d6b6337c719955ab7adfbc77da7267403b36a228e76929ebd8",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/mcp/raise_building_by_id.json",
+      "sha256": "07b9fb8df60bb69f575817611c8f20bab0561d3a6889cfc6248c5d11f62f9c83",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/no_tools/add_building.json",
+      "sha256": "adcc605e7b85977f02caa3c89a77421b2df86a15bed7cda8485fc50ea6445cb8",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/no_tools/count_party_walls.json",
+      "sha256": "eaf74a191beed8ebed478418188b4db6bd2ddc638575779d99d6f2c4d7b165d2",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/no_tools/highest_measured_height.json",
+      "sha256": "010f1da674bddaaf5a4fcb5c679109133d71995f1a0f951c4907b8653f69656c",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/no_tools/list_buildings.json",
+      "sha256": "6a4075eb5bf46220fc533aefaa39f0621fdafe6b7f81411d0f464e0bc7954d1e",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/no_tools/raise_building_by_id.json",
+      "sha256": "5948556502196099a2386019957126945339f2b5c161d2457529c27d4758d1a8",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/code_interpreter/add_building.json",
+      "sha256": "81445aa1b06847b6d2bc9f17ffc8176d556572fdd39141c2e28c475e5352e869",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/code_interpreter/count_party_walls.json",
+      "sha256": "12bdfbbe8bca99748c707ca2f76d0a51f193f078d20d7f06afd315cc69cf1139",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/code_interpreter/highest_measured_height.json",
+      "sha256": "802e9829bd028a43778e82abef8fad8be3473ddebcd659092bc9c72c5d4d6e50",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/code_interpreter/list_buildings.json",
+      "sha256": "09b383a9784f16a33c5d6cdd8eddec146585356c0224ff213ef86d6ae3a14048",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_13-41_gpt-oss-120b_high_completions/code_interpreter/raise_building_by_id.json",
+      "sha256": "feaf1ff872b0ca0c31eb8bb9e88862abb41540d682745b7d357f04fd77ae6824",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/mcp/add_building.json",
+      "sha256": "c7b730f6eb2569a3fd782992036e49ec64b9ce62472817cc37335070a3f7c7d8",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/mcp/count_party_walls.json",
+      "sha256": "bf3b1c31ad94a113566d337f72e476c85f8dd5d1e97b9340c4d4212d71a66ac0",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/mcp/highest_measured_height.json",
+      "sha256": "b96150f309c6cc2cc980bb339fef5cad8d55be2f3029d9764d169cf863f76b1b",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/mcp/list_buildings.json",
+      "sha256": "d927e888887c10ed4a46625eb829d7e830f451d9170ce7523cf245f01c170d52",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/mcp/raise_building_by_id.json",
+      "sha256": "efe6d53d177c816ecbae7f94423eaf0fd50d6834a2852e79e1aa30891c1e4368",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/no_tools/add_building.json",
+      "sha256": "8756bc6766013c373ef0552132be7b05d1e148f839238e0bf7f6979f017cf9c1",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/no_tools/count_party_walls.json",
+      "sha256": "355d5a5a2023948bd3438c388c4da7f32021df0a92eed7d063e0c09f62b63530",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/no_tools/highest_measured_height.json",
+      "sha256": "81b3afb30d457725c0d8a17a62cc2270a889babc9fa86a6327a23004fdd734eb",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/no_tools/list_buildings.json",
+      "sha256": "52d8e4d370d2374c0cf5d63db53029c934ada506913b9f90b1681a1de165bc87",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/no_tools/raise_building_by_id.json",
+      "sha256": "7df0a9a243be4a043d147209043a3a301ae6ac9ef419df19701eecbba492aa6e",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/code_interpreter/add_building.json",
+      "sha256": "e27683f0167f605d5a4b8a7b7822b02a0ef386ec0b707f602655ec289eb0310e",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/code_interpreter/count_party_walls.json",
+      "sha256": "bf48cb95b5b45d6ebe6a161242c9be29d0b837d174c5e440a4e1f013102ba653",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/code_interpreter/highest_measured_height.json",
+      "sha256": "e3589fdb39504cd5770a636e58185ff1df19d6a20f4919f48185cad29e5a3bce",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/code_interpreter/list_buildings.json",
+      "sha256": "b643e941888b8cc114851239208e0d514d7209fcf428f70a54c52e0bfdae2f9b",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/04.06_00-43_mistralai-mistral-small-4-119b_high_completions/code_interpreter/raise_building_by_id.json",
+      "sha256": "48d8563f2218375fdd420b71e6616b51fffeb6ccc0736549f6f15ad4a32fd000",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/mcp/add_building.json",
+      "sha256": "787645a7234084fa973418534bd3d2858ca43bdae5f6865fc2d813c9face8f0f",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/mcp/count_party_walls.json",
+      "sha256": "65ff5619577ec56ec16440a5174c391dd1025c868b6efb18e01ca0d811cd03e4",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/mcp/highest_measured_height.json",
+      "sha256": "ffaf33059b366587ea7cd7e60b9460244da983460b8399a5132e18fe13d201ee",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/mcp/list_buildings.json",
+      "sha256": "f8eccefd4d34e539befc2b3ab049648f1690709c80f43d22223aeff0db67c0a5",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/mcp/raise_building_by_id.json",
+      "sha256": "2dcfc3f0f2670f54c386eacaed5e33e01d04bfd97ac76d8f499ff9cd9d09adee",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/no_tools/add_building.json",
+      "sha256": "42dbca37828c6dca9dd9d78826885b7bd46928a3edf0e9c8711c5bd351b4e424",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/no_tools/count_party_walls.json",
+      "sha256": "36f192943a242d47951ff50c8202f09b36d636f9c13102dfef2d0873f7ff1442",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/no_tools/highest_measured_height.json",
+      "sha256": "c510e446af3f1f3ea6f964407497824cfb88baed8b18b8daa4b10c153daa0681",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/no_tools/list_buildings.json",
+      "sha256": "1a78df6e920b3e84881bcb9ce6b0ccf4eef34b7a4ec9970712125032095282b2",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/no_tools/raise_building_by_id.json",
+      "sha256": "23c27bb8148b25f78e0359a9acaa8ac651641d557ad4f704e8139832b296a921",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/code_interpreter/add_building.json",
+      "sha256": "ae64ce2f2d6d49998793673dbb6cd1c796371c8891fb4bfc6d637e56db002c9f",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/code_interpreter/count_party_walls.json",
+      "sha256": "d22d689b43758fa08a4fdc85800fc7718a404bf5bffef8050ac7b4ecbc11ecd5",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/code_interpreter/highest_measured_height.json",
+      "sha256": "54c1cfa9716635a2ed15c94b31d59cf160e6672e251901d3d73828c24d3428a1",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/code_interpreter/list_buildings.json",
+      "sha256": "5769c6cb1188706199322bbc872ca9e17ac28c9074de974449cc19d0a1c04276",
+      "runs": 100
+    },
+    {
+      "path": "evaluation_logs/11.06_14-51_gpt-5.4-mini_high_codex-oauth/code_interpreter/raise_building_by_id.json",
+      "sha256": "d0e7f6f74b7dd2a04901358ff1358088d4b027be0b2e421afee963bd60d338d8",
+      "runs": 100
+    }
+  ],
+  "total_runs": 4500
+}

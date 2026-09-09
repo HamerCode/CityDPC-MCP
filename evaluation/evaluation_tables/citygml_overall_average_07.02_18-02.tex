@@ -1,0 +1,28 @@
+\begin{table}[H]
+\centering
+\scriptsize
+
+\begin{tabular}{l l r r r r r r}
+\toprule
+Setup & Test Case & Runs & Avg Dur. (ms) & Avg Tok. & Avg Cost (\$) & Avg Calls & Success Rate \\
+\midrule
+code\_interpreter & list\_buildings & 10 & 116\,052 & 182\,958 & \$0.0569 & 3 & 0\% \\
+code\_interpreter & highest\_measured\_height & 10 & 109\,110 & 177\,347 & \$0.0504 & 1 & 50\% \\
+code\_interpreter & roof\_volume\_sum & 10 & 93\,962 & 180\,879 & \$0.0542 & 3 & 0\% \\
+code\_interpreter & raise\_tallest\_building & 10 & 196\,622 & 183\,760 & \$0.0573 & 0 & 100\% \\
+code\_interpreter & add\_building & 10 & 81\,449 & 183\,056 & \$0.0555 & 1 & 0\%** \\
+\midrule
+mcp & list\_buildings & 10 & 15\,119 & 3\,877 & \$0.0027 & 2 & 100\% \\
+mcp & highest\_measured\_height & 10 & 18\,074 & 10\,329 & \$0.0045 & 2 & 100\% \\
+mcp & roof\_volume\_sum & 10 & 63\,270 & 7\,468 & \$0.0061 & 39 & 100\% \\
+mcp & raise\_tallest\_building & 10 & 43\,589 & 8\,978 & \$0.0072 & 8 & 0\% \\
+mcp & add\_building & 10 & 44\,089 & 9\,631 & \$0.0082 & 8 & 0\% \\
+\midrule
+no\_tools & list\_buildings & 10 & 52\,414 & 174\,023 & \$0.0501 & 0 & 0\% \\
+no\_tools & highest\_measured\_height & 10 & 68\,728 & 173\,550 & \$0.0491 & 0 & 50\% \\
+no\_tools & roof\_volume\_sum & 10 & 25\,551 & 171\,765 & \$0.0455 & 0 & 0\% \\
+no\_tools & raise\_tallest\_building & 10 & 17\,534 & 171\,315 & \$0.0444 & 0 & 100\% \\
+no\_tools & add\_building & 10 & 25\,571 & 172\,022 & \$0.0455 & 0 & 0\%** \\
+\bottomrule
+\end{tabular}
+\end{table}

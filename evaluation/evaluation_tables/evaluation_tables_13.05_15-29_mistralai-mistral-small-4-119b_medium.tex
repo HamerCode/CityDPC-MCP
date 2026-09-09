@@ -1,0 +1,114 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{13.05.2026, 15:29 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & mistralai-mistral-small-4-119b \\
+Reasoning Effort & medium \\
+Date & 13.05.2026, 15:29 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{mcp}
+
+\subsection{roof\_volume\_sum}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Metrics (2026-05-13)}
+\label{tab:mcp\_roof\_volume\_sum\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 407.725 m³ & -- \\
+\hline
+1 & 21\,036 & 31\,229 & 30\,089 & 1\,140 & \$0.0098 & 37 & 387.043 m³ & False \\
+2 & 57\,154 & 31\,360 & 30\,167 & 1\,193 & \$0.0099 & 37 & 407.7250000000001 m³ & True \\
+3 & 15\,144 & 22\,311 & 21\,158 & 1\,153 & \$0.0076 & 38 & 407.725 m³ & True \\
+4 & 50\,368 & 27\,700 & 26\,524 & 1\,176 & \$0.0090 & 38 & 397.725 m³ & False \\
+5 & 31\,227 & 25\,604 & 24\,413 & 1\,191 & \$0.0085 & 39 & 384.92500000000007 m³ & False \\
+6 & 36\,318 & 36\,686 & 35\,374 & 1\,312 & \$0.0115 & 39 & 407.725 m³ & True \\
+7 & 19\,931 & 31\,183 & 29\,981 & 1\,202 & \$0.0099 & 38 & 407.32500000000005 m³ & False \\
+8 & 41\,897 & 22\,371 & 21\,170 & 1\,201 & \$0.0077 & 38 & 407.725 m³ & True \\
+9 & 36\,123 & 36\,600 & 35\,379 & 1\,221 & \$0.0113 & 41 & 617.225 m³ & False \\
+10 & 49\,468 & 31\,354 & 30\,200 & 1\,154 & \$0.0099 & 38 & 407.62500000000006 m³ & True \\
+\hline
+Average. & 35\,866 & 29\,639 & 28\,445 & 1\,194 & \$0.0095 & 38 & 407.725 m³ & -- \\
+Total & -- & 296\,398 & 284\,455 & 11\,943 & \$0.0950 & 383 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Outputs (2026-05-13)}
+\label{tab:mcp\_roof\_volume\_sum\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"roof\_volume\_sum\_m3": 387.043, "definition": "Die Dachvolumina wurden durch Berechnung der Dachgeometrien (LoD 2) für jedes Gebäude im Dataset ermittelt. Flache Dächer oder Gebäude ohne auswertbare Dachgeometrie wurden mit 0 m³ berücksichtigt. Die Summe bezieht sich auf die berechneten Volumina aller 36 Gebäude.", "counted\_objects": 36\} \\
+2 & \{
+  "roof\_volume\_sum\_m3": 407.7250000000001,
+  "definition": "Die Dachvolumina wurden für alle Gebäude im Dataset berechnet. Dabei wurde für jedes Gebäude die 3D-Geometrie der Dachflächen analysiert und als Prisma über der Grundfläche angenommen. Das Volumen ergibt sich aus der Multiplikation der Grundfläche mit der gemessenen oder geschätzten Dachhöhe. Bei Flachdächern (LOD 1 oder 2 mit flacher Dachgeometrie) oder fehlenden Dachgeometrien wurde ein Volumen von 0.0 m³ angenommen.",
+  "counted\_ob... \\
+3 & \{"roof\_volume\_sum\_m3": 407.72500000000005, "definition": "Die Dachvolumina wurden für jedes Gebäude im Dataset berechnet, indem die Grundfläche mit der gemessenen Gebäudehöhe multipliziert und durch 2 geteilt wurde (angenommene Formel für Satteldach-Dachvolumen). Gebäude ohne Dachgeometrie oder mit Flachdach wurden mit 0 m³ berücksichtigt.", "counted\_objects": 36\} \\
+4 & \{"roof\_volume\_sum\_m3": 397.72500000000005, "definition": "Die Dachvolumina wurden für jedes Gebäude einzeln berechnet und die Summe aller Dachvolumina in Kubikmetern gebildet. Dabei wurden nur Gebäude berücksichtigt, für die ein Dachvolumen > 0 berechnet wurde. Die Berechnung erfolgt automatisch basierend auf der Dachgeometrie (LoD2) in CityJSON.", "counted\_objects": 7\} \\
+5 & \{"roof\_volume\_sum\_m3": 384.92500000000006, "definition": "Die Dachvolumina wurden für alle 36 Gebäude im Dataset berechnet. Die Berechnung erfolgte durch Multiplikation der Dachfläche (ermittelt aus den Dachgeometrien im LoD 2) mit der durchschnittlichen Höhe der Dachfläche. Bei Flachdächern oder fehlenden Dachgeometrien wurde ein Volumen von 0.0 m³ angenommen.", "counted\_objects": 36\} \\
+6 & \{"roof\_volume\_sum\_m3": 407.72500000000005, "definition": "Die Dachvolumina wurden für jedes Gebäude im Dataset berechnet und die einzelnen Volumina (0.0, 0.0, 0.0, 13.4, 0.0, 0.0, 0.0, 0.0, 100.703, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.802, 0.0, 233.6, 12.293, 0.0, 0.0, 22.145, 20.782, 0.0, 0.0, 0.0) summiert.", "counted\_objects": 36\} \\
+7 & 
+\{"roof\_volume\_sum\_m3": 407.32500000000005, "definition": "Die Dachvolumina wurden für jedes Gebäude einzeln berechnet, indem die geometrische Dachfläche mit der zugehörigen Dachhöhe multipliziert und über alle Dachflächen summiert wurde. Gebäude ohne definierte Dachgeometrie (z. B. Flachdächer oder fehlende LoD2-Daten) erhielten ein Volumen von 0 m³. Die Summe ergibt sich aus den Werten der 36 Gebäude im Dataset.", "counted\_objects": 36\} \\
+8 & \{"roof\_volume\_sum\_m3": 407.72500000000005, "definition": "Die Dachvolumina wurden pro Gebäude basierend auf der vorhandenen Dachgeometrie berechnet. Dabei wurde das Volumen zwischen der Dachunterkante (attribut 'measuredHeight' oder Standardhöhe) und der Dachoberkante (Dachgeometrie) als Prisma oder pyramidenstumpfartige Form berechnet. Bei Flachdächern oder fehlenden Dachgeometrien wurde ein Volumen von 0.0 angenommen.", "counted\_objects": 37\} \\
+9 & ```json
+\{
+  "roof\_volume\_sum\_m3": 617.225,
+  "definition": "Die Dachvolumina wurden pro Gebäude berechnet, indem die Grundfläche (LoD 2) mit der gemessenen Dachhöhe multipliziert wurde. Dabei wurden Gebäude mit Flachdächern (kein Volumen) und Satteldächern berücksichtigt.",
+  "counted\_objects": 36
+\}
+``` \\
+10 & \{"roof\_volume\_sum\_m3": 407.62500000000005, "definition": "Die Dachvolumina wurden für jedes Gebäude im Dataset berechnet, indem die Grundfläche des Daches mit der durchschnittlichen Höhe des Gebäudes multipliziert wurde. Die Summe aller Einzelvolumina ergibt das Gesamtvolumen.", "counted\_objects": 36\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

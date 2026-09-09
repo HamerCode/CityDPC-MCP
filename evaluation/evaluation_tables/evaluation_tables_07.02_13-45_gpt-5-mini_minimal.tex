@@ -1,0 +1,321 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{07.02.2026, 13:45 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & gpt-5-mini \\
+Reasoning Effort & minimal \\
+Date & 07.02.2026, 13:45 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{mcp}
+
+\subsection{list\_buildings}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Metrics (2026-02-07)}
+\label{tab:mcp\_list\_buildings\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 36 buildings & -- \\
+1 & 8\,531 & 3\,317 & 2\,862 & 455 & \$0.0016 & 3 & 37 buildings & False \\
+2 & 9\,283 & 3\,317 & 2\,862 & 455 & \$0.0016 & 3 & 37 buildings & False \\
+3 & 9\,239 & 3\,317 & 2\,862 & 455 & \$0.0016 & 3 & 37 buildings & False \\
+4 & 8\,456 & 3\,303 & 2\,862 & 441 & \$0.0016 & 3 & 37 buildings & False \\
+\hline
+Avg. & 8\,877 & 3\,313 & 2\,862 & 451 & \$0.0016 & 3 & 36 buildings & -- \\
+Total & -- & 13\,254 & 11\,448 & 1\,806 & \$0.0065 & 12 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Outputs (2026-02-07)}
+\label{tab:mcp\_list\_buildings\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+2 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+3 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+4 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{highest\_measured\_height}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Metrics (2026-02-07)}
+\label{tab:mcp\_highest\_measured\_height\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 19.124m & -- \\
+1 & 6\,671 & 10\,699 & 10\,574 & 125 & \$0.0029 & 3 & DENW39AL10001p9r, 21.124m & False \\
+2 & 5\,887 & 10\,699 & 10\,574 & 125 & \$0.0029 & 3 & DENW39AL10001p9r, 21.124m & False \\
+3 & 6\,425 & 10\,699 & 10\,574 & 125 & \$0.0029 & 3 & DENW39AL10001p9r, 21.124m & False \\
+4 & 5\,370 & 10\,699 & 10\,574 & 125 & \$0.0029 & 3 & DENW39AL10001p9r, 21.124m & False \\
+\hline
+Avg. & 6\,088 & 10\,699 & 10\,574 & 125 & \$0.0029 & 3 & DENW39AL10001p9r, 19.124m & -- \\
+Total & -- & 42\,796 & 42\,296 & 500 & \$0.0116 & 12 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Outputs (2026-02-07)}
+\label{tab:mcp\_highest\_measured\_height\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":6\} \\
+2 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":6\} \\
+3 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":6\} \\
+4 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":6\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{roof\_volume\_sum}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Metrics (2026-02-07)}
+\label{tab:mcp\_roof\_volume\_sum\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 407.725 m³ & -- \\
+1 & 11\,381 & 11\,596 & 11\,308 & 288 & \$0.0034 & 7 & 0.0 m³ & False \\
+2 & 56\,120 & 14\,684 & 13\,167 & 1\,517 & \$0.0063 & 43 & 709.725 m³ & False \\
+3 & 47\,475 & 6\,426 & 4\,979 & 1\,447 & \$0.0041 & 42 & 708.725 m³ & False \\
+4 & 60\,013 & 14\,187 & 12\,727 & 1\,460 & \$0.0061 & 42 & 608.525 m³ & False \\
+\hline
+Avg. & 43\,747 & 11\,723 & 10\,545 & 1\,178 & \$0.0050 & 33 & 407.725 m³ & -- \\
+Total & -- & 46\,893 & 42\,181 & 4\,712 & \$0.0200 & 134 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Outputs (2026-02-07)}
+\label{tab:mcp\_roof\_volume\_sum\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"roof\_volume\_sum\_m3":0.0,"definition":"Das Dachvolumen ist die Summe der Volumina aller Dachgeometrien der Gebäude im Dataset. Für jedes Gebäude wird das Volumen aus den 3D-Dachflächen (LoD2) berechnet und alle Einzelvolumina werden addiert. (Einheiten: Kubikmeter)","counted\_objects":37\} \\
+2 & \{"roof\_volume\_sum\_m3":709.725,"definition":"Das Dachvolumen jedes Gebäudes wurde aus der 3D-Dachgeometrie berechnet und anschließend über alle Gebäude summiert. Für Gebäude ohne Dachgeometrie oder mit fehlenden Angaben wurde ein Volumen von 0 m³ angenommen. Die Summe ist die Addition aller einzelnen Dachvolumen in Kubikmetern.","counted\_objects":37\} \\
+3 & \{"roof\_volume\_sum\_m3":708.725,"definition":"Das Dachvolumen ist die Summe der individuell berechneten Volumina aller Gebäude im Dataset. Für jedes Gebäude wurde das Volumen der Dachgeometrie in Kubikmetern berechnet und anschließend summiert.","counted\_objects":37\} \\
+4 & \{"roof\_volume\_sum\_m3":608.525,"definition":"Das Dachvolumen wurde für jedes Gebäude im Dataset berechnet und die Volumina (in m³) summiert. Nur erkannte Dachvolumina wurden addiert; Gebäude ohne berechenbares Dachvolumen tragen 0 m³ bei.","counted\_objects":37\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{raise\_tallest\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Metrics (2026-02-07)}
+\label{tab:mcp\_raise\_tallest\_building\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 21.124m & -- \\
+1 & 13\,635 & 4\,007 & 3\,527 & 480 & \$0.0018 & 6 & DENW39AL10001p9r, N/A & False \\
+2 & 11\,070 & 3\,975 & 3\,525 & 450 & \$0.0018 & 6 & DENW39AL10001p9r, N/A & False \\
+3 & 13\,003 & 4\,123 & 3\,608 & 515 & \$0.0019 & 6 & DENW39AL10001p9r, N/A & False \\
+4 & 12\,189 & 3\,728 & 3\,313 & 415 & \$0.0017 & 5 & DENW39AL10001p9r, N/A & False \\
+\hline
+Avg. & 12\,474 & 3\,958 & 3\,493 & 465 & \$0.0018 & 5 & DENW39AL10001p9r, 21.124m & -- \\
+Total & -- & 15\,833 & 13\,973 & 1\,860 & \$0.0072 & 23 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Outputs (2026-02-07)}
+\label{tab:mcp\_raise\_tallest\_building\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & Änderung durchgeführt und gespeichert.
+
+Bestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight: 19.124 m
+- Neue measuredHeight: 21.124 m
+- Änderung gespeichert: Ja (evaluation.city.json, 37 Gebäude)
+
+HINWEIS: Das Dataset enthielt nach dem ersten Laden bereits measuredHeight = 21.124 m; ich habe die measuredHeight explizit auf 21.124 m gesetzt, die Änderung vorgenommen und das Dataset gespeichert (siehe Save-Timestamp: 2026-02-07 13:49:53). \\
+2 & Änderung durchgeführt und gespeichert.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 19.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung im Dataset gespeichert: Ja (evaluation.city.json, 37 Gebäude, gespeichert am 2026-02-07 13:50:04) \\
+3 & Änderung durchgeführt und gespeichert.
+
+Bestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 19.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung erfolgreich im Dataset gespeichert: Ja (evaluation.city.json, 37 Gebäude, Timestamp: 2026-02-07 13:50:17) \\
+4 & Änderung durchgeführt und gespeichert.
+
+Bestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 19.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung erfolgreich im Dataset gespeichert: Ja (evaluation.city.json, 37 Gebäude) \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{add\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Metrics (2026-02-07)}
+\label{tab:mcp\_add\_building\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & EVAL\_TEST\_BUILDING\_001 & -- \\
+1 & 13\,102 & 3\,829 & 3\,250 & 579 & \$0.0020 & 4 & EVAL\_TEST\_BUILDING\_001, height N/A & False \\
+2 & 14\,606 & 3\,779 & 3\,188 & 591 & \$0.0020 & 4 & EVAL\_TEST\_BUILDING\_001, height N/A & False \\
+3 & 13\,945 & 3\,921 & 3\,250 & 671 & \$0.0022 & 4 & EVAL\_TEST\_BUILDING\_001, height N/A & False \\
+4 & 19\,778 & 5\,231 & 4\,243 & 988 & \$0.0030 & 9 & EVAL\_TEST\_BUILDING\_001, height N/A & False \\
+\hline
+Avg. & 15\,357 & 4\,190 & 3\,482 & 707 & \$0.0023 & 5 & EVAL\_TEST\_BUILDING\_001 & -- \\
+Total & -- & 16\,760 & 13\,931 & 2\,829 & \$0.0091 & 21 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Outputs (2026-02-07)}
+\label{tab:mcp\_add\_building\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & Ich habe das Dataset geladen, das Gebäude hinzugefügt bzw. aktualisiert, mit Attributen versehen und das Dataset gespeichert.
+
+Zusammenfassung (konkret gesetzte Werte):
+- Vergebene Building-ID: EVAL\_TEST\_BUILDING\_001
+- Ground footprint (2D, exakt): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe (groundSurfaceHeight): 198.5 m
+- Gemessene Gebäudehöhe (measuredHeight): 10.5 m
+- Stockwerke über Grund (storeysAboveGround... \\
+2 & Ich habe das Dataset geladen, das Gebäude geprüft und das Dataset gespeichert. Zusammenfassung (konkrete Werte):
+
+- Vergebene Building-ID: EVAL\_TEST\_BUILDING\_001
+- Gesetze Attribute:
+  - measuredHeight: 10.5 m
+  - storeysAboveGround: 3
+  - roofType: 1030 (Satteldach)
+  - function: 31001\_1010 (Wohngebäude)
+- Wurde das Gebäude erfolgreich zum Dataset hinzugefügt: Das Gebäude existierte bereits mit exakt diesen Attributen; der Datensatz wurde anschließend gespeichert.
+
+Detaillierte technische Werte... \\
+3 & Ich habe das Dataset geladen, das Gebäude aktualisiert und das Dataset gespeichert.
+
+Zusammenfassung (konkret, exakt):
+- Vergebene Building-ID: EVAL\_TEST\_BUILDING\_001
+- Gesetze Attribute:
+  - measuredHeight: 10.5 m
+  - storeysAboveGround: 3
+  - roofType: 1030 (Satteldach)
+  - function: 31001\_1010 (Wohngebäude)
+- Wurde das Gebäude erfolgreich zum Dataset hinzugefügt/aktualisiert? Ja — das Gebäude war bereits vorhanden und wurde mit den angegebenen Attributen angereichert.
+- Dataset gespeichert: J... \\
+4 & Ich habe die angegebenen Schritte ausgeführt. Zusammenfassung der Aktionen und des Ergebnisses:
+
+Durchgeführte Schritte (konkret):
+- Dataset geladen: evaluation.city.json (37 Gebäude).
+- Snapshot erstellt (Index 1): "Before adding EVAL\_TEST\_BUILDING\_001".
+- Gebäude versucht zu erstellen — es existierte bereits im Dataset, daher wurde nicht neu erstellt.
+- Gebäude-Attribute geprüft (existierender Eintrag) und anschließend mit den geforderten Werten angereichert.
+  - Setzte measuredHeight = 10.5 m... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

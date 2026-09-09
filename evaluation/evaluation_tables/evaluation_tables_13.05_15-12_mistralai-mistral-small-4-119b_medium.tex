@@ -1,0 +1,192 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{13.05.2026, 15:12 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & mistralai-mistral-small-4-119b \\
+Reasoning Effort & medium \\
+Date & 13.05.2026, 15:12 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{mcp}
+
+\subsection{list\_buildings}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Metrics (2026-05-13)}
+\label{tab:mcp\_list\_buildings\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 36 buildings & -- \\
+\hline
+1 & 7\,083 & 10\,938 & 10\,359 & 579 & \$0.0037 & 2 & 37 buildings & False \\
+2 & 6\,185 & 10\,934 & 10\,359 & 575 & \$0.0037 & 2 & 37 buildings & False \\
+3 & 5\,302 & 7\,670 & 7\,089 & 581 & \$0.0029 & 3 & 37 buildings & False \\
+4 & 5\,801 & 10\,934 & 10\,359 & 575 & \$0.0037 & 2 & 37 buildings & False \\
+5 & 5\,852 & 10\,934 & 10\,359 & 575 & \$0.0037 & 2 & 37 buildings & False \\
+6 & 6\,916 & 17\,834 & 17\,180 & 654 & \$0.0056 & 6 & 37 buildings & False \\
+7 & 6\,198 & 14\,295 & 13\,709 & 586 & \$0.0046 & 3 & 37 buildings & False \\
+8 & 5\,254 & 7\,652 & 7\,078 & 574 & \$0.0029 & 2 & 37 buildings & False \\
+9 & 5\,681 & 10\,934 & 10\,359 & 575 & \$0.0037 & 2 & 37 buildings & False \\
+10 & 5\,724 & 10\,934 & 10\,359 & 575 & \$0.0037 & 2 & 37 buildings & False \\
+\hline
+Average. & 5\,999 & 11\,305 & 10\,721 & 584 & \$0.0039 & 2 & 36 buildings & -- \\
+Total & -- & 113\,059 & 107\,210 & 5\,849 & \$0.0385 & 26 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Outputs (2026-05-13)}
+\label{tab:mcp\_list\_buildings\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{
+  "building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq",... \\
+2 & \{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq", "D... \\
+3 & \{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq", "D... \\
+4 & \{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq", "D... \\
+5 & \{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq", "D... \\
+6 & ```json
+\{
+  "building\_ids": [
+    "DENW39AL1Nn000Vg",
+    "DENW39AL10001qGg",
+    "DENW39AL10001q3J",
+    "DENW39AL10001p9r",
+    "DENW39AL10001qka",
+    "DENW39AL10001qgT",
+    "DENW39AL10001pWY",
+    "DENW39AL10001qBh",
+    "DENW39AL10001pRn",
+    "DENW39AL10001qTH",
+    "DENW39AL1JH0006o",
+    "DENW39AL1000040v",
+    "DENW39AL10001pum",
+    "DENW39AL3T20001I",
+    "DENW39AL10001pRV",
+    "DENW39AL3XN000Ex",
+    "DENW39AL100023ri",
+    "DENW39AL10001pyT",
+    "DENW39AL1Nn000Uw",
+    "DENW39AL1... \\
+7 & \{
+  "building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq",... \\
+8 & \{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq", "D... \\
+9 & \{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq", "D... \\
+10 & \{"building\_ids": ["DENW39AL1Nn000Vg", "DENW39AL10001qGg", "DENW39AL10001q3J", "DENW39AL10001p9r", "DENW39AL10001qka", "DENW39AL10001qgT", "DENW39AL10001pWY", "DENW39AL10001qBh", "DENW39AL10001pRn", "DENW39AL10001qTH", "DENW39AL1JH0006o", "DENW39AL1000040v", "DENW39AL10001pum", "DENW39AL3T20001I", "DENW39AL10001pRV", "DENW39AL3XN000Ex", "DENW39AL100023ri", "DENW39AL10001pyT", "DENW39AL1Nn000Uw", "DENW39AL10001pEv", "DENW39AL100023sG", "DENW39AL10001r2n", "DENW39AL1Nn000VC", "DENW39AL10001pMq", "D... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{highest\_measured\_height}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Metrics (2026-05-13)}
+\label{tab:mcp\_highest\_measured\_height\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 19.124m & -- \\
+\hline
+1 & 12\,700 & -- & -- & -- & \$0.0000 & 0 & N/A, N/A & False \\
+2 & 11\,778 & -- & -- & -- & \$0.0000 & 0 & N/A, N/A & False \\
+3 & 12\,389 & -- & -- & -- & \$0.0000 & 0 & N/A, N/A & False \\
+4 & 12\,319 & 91\,316 & 90\,286 & 1\,030 & \$0.0246 & 40 & DENW39AL10001p9r, 19.124m & True \\
+5 & 12\,238 & -- & -- & -- & \$0.0000 & 0 & N/A, N/A & False \\
+6 & 11\,685 & 83\,554 & 82\,671 & 883 & \$0.0224 & 36 & DENW39AL10001p9r, 19.124m & True \\
+7 & 11\,452 & 62\,772 & 61\,732 & 1\,040 & \$0.0175 & 42 & DENW39AL10001p9r, 19.124m & True \\
+8 & 12\,974 & -- & -- & -- & \$0.0000 & 0 & N/A, N/A & False \\
+9 & 14\,455 & -- & -- & -- & \$0.0000 & 0 & N/A, N/A & False \\
+10 & 11\,098 & 55\,367 & 54\,346 & 1\,021 & \$0.0156 & 40 & DENW39AL10001p9r, 19.124m & True \\
+\hline
+Average. & 12\,308 & 73\,252 & 72\,258 & 993 & \$0.0080 & 15 & DENW39AL10001p9r, 19.124m & -- \\
+Total & -- & 293\,009 & 289\,035 & 3\,974 & \$0.0802 & 158 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Outputs (2026-05-13)}
+\label{tab:mcp\_highest\_measured\_height\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 &  \\
+2 &  \\
+3 &  \\
+4 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 7
+\} \\
+5 &  \\
+6 & \{"building\_id": "DENW39AL10001p9r", "measuredHeight": 19.124, "missing\_count": 8\} \\
+7 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 4
+\} \\
+8 &  \\
+9 &  \\
+10 & \{"building\_id": "DENW39AL10001p9r", "measuredHeight": 19.124, "missing\_count": 7\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

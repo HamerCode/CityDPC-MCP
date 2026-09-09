@@ -1,0 +1,511 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{13.05.2026, 16:01 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & gpt-oss-120b \\
+Reasoning Effort & medium \\
+Date & 13.05.2026, 16:01 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{mcp}
+
+\subsection{list\_buildings}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Metrics (2026-05-13)}
+\label{tab:mcp\_list\_buildings\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 36 buildings & -- \\
+\hline
+1 & 9\,767 & 3\,400 & 2\,490 & 910 & \$0.0024 & 2 & 36 buildings & True \\
+2 & 12\,330 & 3\,414 & 2\,490 & 924 & \$0.0025 & 2 & 36 buildings & True \\
+3 & 7\,707 & 4\,201 & 3\,657 & 544 & \$0.0020 & 3 & 36 buildings & True \\
+4 & 8\,415 & 3\,836 & 3\,279 & 557 & \$0.0019 & 3 & 36 buildings & True \\
+5 & 8\,373 & 3\,417 & 2\,490 & 927 & \$0.0025 & 2 & 36 buildings & True \\
+6 & 8\,624 & 4\,163 & 3\,657 & 506 & \$0.0019 & 3 & 36 buildings & True \\
+7 & 11\,532 & 3\,510 & 2\,490 & 1\,020 & \$0.0027 & 2 & 36 buildings & True \\
+8 & 7\,258 & 4\,274 & 3\,657 & 617 & \$0.0021 & 3 & 36 buildings & True \\
+9 & 10\,929 & 4\,197 & 3\,657 & 540 & \$0.0020 & 3 & N/A & False \\
+10 & 9\,027 & 3\,533 & 2\,490 & 1\,043 & \$0.0027 & 2 & 36 buildings & True \\
+\hline
+Average. & 9\,396 & 3\,794 & 3\,035 & 758 & \$0.0023 & 2 & 36 buildings & -- \\
+Total & -- & 37\,945 & 30\,357 & 7\,588 & \$0.0228 & 25 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Outputs (2026-05-13)}
+\label{tab:mcp\_list\_buildings\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+2 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+3 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+4 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+5 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+6 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+7 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+8 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+9 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+10 & \{
+  "building\_ids": [
+    "DENW39AL1Nn000Vg",
+    "DENW39AL10001qGg",
+    "DENW39AL10001q3J",
+    "DENW39AL10001p9r",
+    "DENW39AL10001qka",
+    "DENW39AL10001qgT",
+    "DENW39AL10001pWY",
+    "DENW39AL10001qBh",
+    "DENW39AL10001pRn",
+    "DENW39AL10001qTH",
+    "DENW39AL1JH0006o",
+    "DENW39AL1000040v",
+    "DENW39AL10001pum",
+    "DENW39AL3T20001I",
+    "DENW39AL10001pRV",
+    "DENW39AL3XN000Ex",
+    "DENW39AL100023ri",
+    "DENW39AL10001pyT",
+    "DENW39AL1Nn000Uw",
+    "DENW39AL10001pEv"... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{highest\_measured\_height}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Metrics (2026-05-13)}
+\label{tab:mcp\_highest\_measured\_height\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 19.124m & -- \\
+\hline
+1 & 12\,677 & 2\,419 & 2\,187 & 232 & \$0.0010 & 2 & DENW39AL10001p9r, 19.124m & True \\
+2 & 4\,190 & 2\,393 & 2\,187 & 206 & \$0.0010 & 2 & DENW39AL10001p9r, 19.124m & True \\
+3 & 7\,095 & 2\,411 & 2\,187 & 224 & \$0.0010 & 2 & DENW39AL10001p9r, 19.124m & True \\
+4 & 23\,396 & 2\,368 & 2\,187 & 181 & \$0.0009 & 2 & DENW39AL10001p9r, 19.124m & True \\
+5 & 10\,800 & 2\,419 & 2\,187 & 232 & \$0.0010 & 2 & DENW39AL10001p9r, 19.124m & True \\
+6 & 12\,789 & 2\,372 & 2\,187 & 185 & \$0.0009 & 2 & DENW39AL10001p9r, 19.124m & True \\
+7 & 7\,882 & 2\,423 & 2\,187 & 236 & \$0.0010 & 2 & DENW39AL10001p9r, 19.124m & True \\
+8 & 3\,445 & 2\,354 & 2\,187 & 167 & \$0.0009 & 2 & DENW39AL10001p9r, 19.124m & True \\
+9 & 3\,796 & 2\,401 & 2\,187 & 214 & \$0.0010 & 2 & DENW39AL10001p9r, 19.124m & True \\
+10 & 12\,631 & 2\,370 & 2\,187 & 183 & \$0.0009 & 2 & DENW39AL10001p9r, 19.124m & True \\
+\hline
+Average. & 9\,870 & 2\,393 & 2\,187 & 206 & \$0.0010 & 2 & DENW39AL10001p9r, 19.124m & -- \\
+Total & -- & 23\,930 & 21\,870 & 2\,060 & \$0.0096 & 20 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Outputs (2026-05-13)}
+\label{tab:mcp\_highest\_measured\_height\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 5
+\} \\
+2 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 5
+\} \\
+3 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 5
+\} \\
+4 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":19.124,"missing\_count":5\} \\
+5 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 5
+\} \\
+6 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 5
+\} \\
+7 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":19.124,"missing\_count":5\} \\
+8 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":19.124,"missing\_count":5\} \\
+9 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 5
+\} \\
+10 & \{
+  "building\_id": "DENW39AL10001p9r",
+  "measuredHeight": 19.124,
+  "missing\_count": 5
+\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{roof\_volume\_sum}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Metrics (2026-05-13)}
+\label{tab:mcp\_roof\_volume\_sum\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 407.725 m³ & -- \\
+\hline
+1 & 5\,459 & 2\,488 & 2\,227 & 261 & \$0.0011 & 2 & 407.725 m³ & True \\
+2 & 7\,955 & 3\,484 & 3\,103 & 381 & \$0.0015 & 3 & 407.725 m³ & True \\
+3 & 20\,363 & 2\,397 & 2\,227 & 170 & \$0.0009 & 2 & 407.725 m³ & True \\
+4 & 4\,002 & 2\,410 & 2\,227 & 183 & \$0.0009 & 2 & 407.725 m³ & True \\
+5 & 4\,044 & 2\,454 & 2\,227 & 227 & \$0.0010 & 2 & 407.725 m³ & True \\
+6 & 4\,257 & 2\,460 & 2\,227 & 233 & \$0.0010 & 2 & 407.725 m³ & True \\
+7 & 4\,318 & 2\,434 & 2\,227 & 207 & \$0.0010 & 2 & 407.725 m³ & True \\
+8 & 11\,109 & 2\,410 & 2\,227 & 183 & \$0.0009 & 2 & 407.725 m³ & True \\
+9 & 39\,632 & 2\,424 & 2\,227 & 197 & \$0.0010 & 2 & 407.725 m³ & True \\
+10 & 3\,911 & 2\,408 & 2\,227 & 181 & \$0.0009 & 2 & 407.725 m³ & True \\
+\hline
+Average. & 10\,505 & 2\,536 & 2\,314 & 222 & \$0.0010 & 2 & 407.725 m³ & -- \\
+Total & -- & 25\,369 & 23\,146 & 2\,223 & \$0.0102 & 21 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Outputs (2026-05-13)}
+\label{tab:mcp\_roof\_volume\_sum\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"roof\_volume\_sum\_m3": 407.725, "definition": "Summe der pro Gebäude mit CityDPC berechneten Dachvolumina.", "counted\_objects": 7\} \\
+2 & \{
+  "roof\_volume\_sum\_m3": 407.725,
+  "definition": "Summe der pro Gebäude mit CityDPC berechneten Dachvolumina.",
+  "counted\_objects": 7
+\} \\
+3 & \{"roof\_volume\_sum\_m3": 407.725, "definition": "Summe der pro Gebäude mit CityDPC berechneten Dachvolumina.", "counted\_objects": 7\} \\
+4 & \{"roof\_volume\_sum\_m3": 407.725, "definition": "Summe der pro Gebäude mit CityDPC berechneten Dachvolumina.", "counted\_objects": 7\} \\
+5 & \{"roof\_volume\_sum\_m3": 407.725, "definition": "Summe der pro Gebäude mit CityDPC berechnet­en Dachvolumen, basierend auf den Dachflächen und deren Höhe über Grund.", "counted\_objects": 7\} \\
+6 & \{
+  "roof\_volume\_sum\_m3": 407.725,
+  "definition": "Summe der pro Gebäude mit CityDPC berechneten Dachvolumina.",
+  "counted\_objects": 7
+\} \\
+7 & \{
+  "roof\_volume\_sum\_m3": 407.725,
+  "definition": "Summe der pro Gebäude mit CityDPC berechneten Dachvolumina.",
+  "counted\_objects": 7
+\} \\
+8 & \{
+  "roof\_volume\_sum\_m3": 407.725,
+  "definition": "Summe der pro Gebäude mit CityDPC berechnet en Dachvoluminen.",
+  "counted\_objects": 7
+\} \\
+9 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Die Dachvolumen wurden für jedes Gebäude mit vorhandenen Dachflächen (CityDPC) anhand ihrer dreidimensionalen Geometrie berechnet und anschließend aufsummiert.","counted\_objects":7\} \\
+10 & \{"roof\_volume\_sum\_m3": 407.725, "definition": "Summe der pro Gebäude mit CityDPC berechneten Dachvolumina.", "counted\_objects": 7\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{raise\_tallest\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Metrics (2026-05-13)}
+\label{tab:mcp\_raise\_tallest\_building\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 21.124m & -- \\
+\hline
+1 & 25\,958 & 7\,667 & 7\,263 & 404 & \$0.0026 & 4 & DENW39AL10001p9r, 21.124m & True \\
+2 & 7\,558 & 7\,712 & 7\,259 & 453 & \$0.0027 & 4 & DENW39AL10001p9r, 21.124m & True \\
+3 & 23\,429 & 7\,788 & 7\,261 & 527 & \$0.0029 & 4 & DENW39AL10001p9r, 21.124m & True \\
+4 & 12\,843 & 7\,687 & 7\,263 & 424 & \$0.0027 & 4 & DENW39AL10001p9r, 21.124m & True \\
+5 & 7\,357 & 7\,680 & 7\,258 & 422 & \$0.0027 & 4 & DENW39AL10001p9r, 21.124m & True \\
+6 & 10\,006 & 7\,696 & 7\,278 & 418 & \$0.0027 & 4 & DENW39AL10001p9r, 21.124m & True \\
+7 & 6\,450 & 7\,665 & 7\,272 & 393 & \$0.0026 & 4 & DENW39AL10001p9r, 21.124m & True \\
+8 & 9\,333 & 7\,631 & 7\,259 & 372 & \$0.0026 & 4 & DENW39AL10001p9r, 21.124m & True \\
+9 & 6\,528 & 7\,694 & 7\,263 & 431 & \$0.0027 & 4 & DENW39AL10001p9r, 21.124m & True \\
+10 & 226\,332 & -- & -- & -- & \$0.0000 & 0 & DENW39AL10001p9r, 19.124m & False \\
+\hline
+Average. & 33\,579 & 7\,691 & 7\,264 & 427 & \$0.0024 & 3 & DENW39AL10001p9r, 21.124m & -- \\
+Total & -- & 69\,220 & 65\,376 & 3\,844 & \$0.0240 & 36 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Outputs (2026-05-13)}
+\label{tab:mcp\_raise\_tallest\_building\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & **Bestätigung der erfolgten Modifikation**
+
+- **Building-ID:** DENW39AL10001p9r  
+- **Alte measuredHeight:** 19.124 m  
+- **Neue measuredHeight:** 21.124 m  
+- **Speicherung:** Die Änderung wurde erfolgreich im Dataset gespeichert. \\
+2 & **Bestätigung der Änderung**
+
+- **Building-ID:** DENW39AL10001p9r  
+- **Alte measuredHeight:** 19.124 m  
+- **Neue measuredHeight:** 21.124 m  
+- **Speicherung:** Erfolgreich im Dataset `evaluation\_\_13.05\_16-01\_gpt-oss-120b\_medium\_\_mcp\_\_raise\_tallest\_building\_\_run\_002.city.json` gespeichert. \\
+3 & **Bestätigung der Änderung**
+
+- **Building-ID:** DENW39AL10001p9r  
+- **Alte measuredHeight:** 19.124 m  
+- **Neue measuredHeight:** 21.124 m  
+- **Speicherung:** Die Änderung wurde erfolgreich im Dataset gespeichert. \\
+4 & **Bestätigung der Durchgeführten Änderung**
+
+- **Building-ID:** `DENW39AL10001p9r`  
+- **Alte measuredHeight:** **19.124 m**  
+- **Neue measuredHeight:** **21.124 m**  
+- **Speicherung im Dataset:** Erfolgreich gespeichert (Datei `evaluation\_\_13.05\_16-01\_gpt-oss-120b\_medium\_\_mcp\_\_raise\_tallest\_building\_\_run\_004.city.json`). \\
+5 & **Bestätigung der Modifikation**
+
+- **Building-ID:** DENW39AL10001p9r  
+- **Alte measuredHeight:** 19.124 m  
+- **Neue measuredHeight:** 21.124 m  
+- **Änderung gespeichert:** Ja, das Dataset wurde erfolgreich mit der neuen Höhe gespeichert. \\
+6 & **Bestätigung der Modifikation**
+
+- **Building-ID:** DENW39AL10001p9r  
+- **Alte measuredHeight:** 19.124 m  
+- **Neue measuredHeight:** 21.124 m  
+- **Speichern erfolgreich:** Ja (Dataset wurde mit `save\_dataset` gespeichert) \\
+7 & **Bestätigung der Modifikation**
+
+- **Building-ID:** `DENW39AL10001p9r`  
+- **Alte measuredHeight:** `19.124 m`  
+- **Neue measuredHeight:** `21.124 m`  
+- **Speicherung erfolgreich:** Ja (Dataset wurde gespeichert) \\
+8 & **Bestätigung der Modifikation**
+
+- **Building-ID:** DENW39AL10001p9r  
+- **Alte measuredHeight:** 19.124 m  
+- **Neue measuredHeight:** 21.124 m  
+- **Speicherung erfolgreich:** Ja (Dataset gespeichert) \\
+9 & **Modification performed**
+
+- **Building-ID:** DENW39AL10001p9r  
+- **Old measuredHeight:** 19.124 m  
+- **New measuredHeight:** 21.124 m  
+- **Save status:** ✔️ Änderungen wurden erfolgreich im Dataset gespeichert. \\
+10 &  \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{add\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Metrics (2026-05-13)}
+\label{tab:mcp\_add\_building\_metrics\_2026-05-13}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & EVAL\_TEST\_BUILDING\_001 & -- \\
+\hline
+1 & 23\,288 & 14\,317 & 12\,912 & 1\,405 & \$0.0060 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+2 & 15\,146 & 11\,787 & 10\,454 & 1\,333 & \$0.0053 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+3 & 11\,967 & 11\,650 & 10\,471 & 1\,179 & \$0.0050 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+4 & 18\,024 & 14\,562 & 12\,918 & 1\,644 & \$0.0065 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+5 & 14\,465 & 11\,826 & 10\,473 & 1\,353 & \$0.0053 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+6 & 16\,184 & 14\,255 & 12\,916 & 1\,339 & \$0.0059 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+7 & 10\,883 & 11\,602 & 10\,454 & 1\,148 & \$0.0049 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+8 & 226\,155 & -- & -- & -- & \$0.0000 & 0 & EVAL\_TEST\_BUILDING\_001, height N/A & False \\
+9 & 222\,525 & -- & -- & -- & \$0.0000 & 0 & EVAL\_TEST\_BUILDING\_001, height N/A & False \\
+10 & 222\,329 & -- & -- & -- & \$0.0000 & 0 & EVAL\_TEST\_BUILDING\_001, height N/A & False \\
+\hline
+Average. & 78\,096 & 12\,857 & 11\,514 & 1\,343 & \$0.0039 & 3 & EVAL\_TEST\_BUILDING\_001 & -- \\
+Total & -- & 89\,999 & 80\,598 & 9\,401 & \$0.0390 & 31 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Outputs (2026-05-13)}
+\label{tab:mcp\_add\_building\_outputs\_2026-05-13}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & **Ergebnis der Operation**
+
+- **Building‑ID:** `EVAL\_TEST\_BUILDING\_001`  
+- **Setzte Attribute:**  
+  - `measuredHeight` = 10.5 m  
+  - `storeysAboveGround` = 3  
+  - `roofType` = `1030` (Satteldach)  
+  - `function` = `31001\_1010` (Wohngebäude)  
+
+- **Dataset‑Status:** Das Gebäude wurde erfolgreich zum Dataset **evaluation\_\_13.05\_16-01\_gpt-oss-120b\_medium\_\_mcp\_\_add\_building\_\_run\_001.city.json** hinzugefügt und das Dataset wurde gespeichert (jetzt 37 Gebäude).
+
+**Zusammenfassung des erstellten G... \\
+2 & **Ergebnis der Aktion**
+
+| Merkmal                         | Wert |
+|--------------------------------|------|
+| **Building‑ID**                | `EVAL\_TEST\_BUILDING\_001` |
+| **Measured Height**            | 10.5 m |
+| **Storeys Above Ground**       | 3 |
+| **Roof‑Type**                  | `1030` (Satteldach) |
+| **Function**                   | `31001\_1010` (Wohngebäude) |
+| **Hinzugefügt zum Dataset**    | **Ja** (jetzt 37 Gebäude) |
+| **Dataset gespeichert**        | **Ja** (Datei `evaluation\_... \\
+3 & **Zusammenfassung des hinzugefügten Gebäudes**
+
+- **Building‑ID:** `EVAL\_TEST\_BUILDING\_001`  
+- **Gemessene Höhe (measuredHeight):** **10.5 m**  
+- **Stockwerke über Grund (storeysAboveGround):** **3**  
+- **Dachtyp (roofType):** **`1030`** → Satteldach  
+- **Funktion (function):** **`31001\_1010`** → Wohngebäude  
+
+**Boundary‑Information (Vertex‑Indizes)**  
+Der Grundriss ist ein geschlossenes Rechteck; die Vertex‑Indizes lauten: **[0, 1, 2, 3, 4]** (die letzte ist die Wiederholung des ersten Pu... \\
+4 & **Zusammenfassung des erstellten Gebäudes**
+
+- **Building‑ID:** `EVAL\_TEST\_BUILDING\_001`  
+- **Measured Height (measuredHeight):** 10.5 m  
+- **Storeys Above Ground (storeysAboveGround):** 3  
+- **Roof Type (roofType):** `1030` – Satteldach  
+- **Function (function):** `31001\_1010` – Wohngebäude  
+
+**Status**
+
+- Das Gebäude wurde erfolgreich zum Dataset **evaluation\_\_13.05\_16-01\_gpt-oss-120b\_medium\_\_mcp\_\_add\_building\_\_run\_004.city.json** hinzugefügt.  
+- Das Dataset wurde mittels `save\_dataset` ... \\
+5 & **Erstellung \& Speicherung erfolgreich durchgeführt**
+
+| Attribut | Wert |
+|----------|------|
+| **Building‑ID** | `EVAL\_TEST\_BUILDING\_001` |
+| **Measured Height** | **10.5 m** |
+| **Storeys Above Ground** | **3** |
+| **Roof Type** | `1030` (Satteldach) |
+| **Function** | `31001\_1010` (Wohngebäude) |
+| **Ground Surface Height** | 198.5 m |
+| **Geometry Height (inkl. Dach)** | 13.5 m (10.5 m + 3.0 m Dachhöhe) |
+| **Boundary Vertex‑Indices** | `[0, 1, 2, 3, 4]` (geschlossener Rechteck‑Footprint) |... \\
+6 & **Ergebnis der Verarbeitung**
+
+| Feld                     | Wert |
+|--------------------------|------|
+| **Building‑ID**          | `EVAL\_TEST\_BUILDING\_001` |
+| **Measured Height**      | 10.5 m |
+| **Storeys Above Ground** | 3 |
+| **Roof Type**            | `1030` (Satteldach) |
+| **Function**             | `31001\_1010` (Wohngebäude) |
+| **Hinzugefügt zum Dataset** | Ja (jetzt 37 Gebäude) |
+| **Dataset gespeichert** | Ja (Beschreibung: “Added EVAL\_TEST\_BUILDING\_001 with specs”) |
+
+**Boundary‑In... \\
+7 & **Ergebnisübersicht**
+
+- **Building‑ID:** `EVAL\_TEST\_BUILDING\_001`  
+- **Gemessene Höhe (measuredHeight):** 10.5 m  
+- **Stockwerke über Grund (storeysAboveGround):** 3  
+- **Dachtyp (roofType):** `1030` (Satteldach)  
+- **Funktion (function):** `31001\_1010` (Wohngebäude)  
+- **Boundary‑Vertices‑Indizes:** 0 – 4 (die Eckpunkte des Rechtecks)  
+
+**Status:** Das Gebäude wurde erfolgreich zum Dataset `evaluation\_\_13.05\_16-01\_gpt-oss-120b\_medium\_\_mcp\_\_add\_building\_\_run\_007.city.json` hinzugefügt und... \\
+8 &  \\
+9 &  \\
+10 &  \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

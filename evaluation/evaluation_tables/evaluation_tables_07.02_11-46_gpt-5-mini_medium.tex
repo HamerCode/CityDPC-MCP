@@ -1,0 +1,859 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{07.02.2026, 11:46 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & gpt-5-mini \\
+Reasoning Effort & medium \\
+Date & 07.02.2026, 11:46 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{mcp}
+
+\subsection{list\_buildings}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Metrics (2026-02-07)}
+\label{tab:mcp\_list\_buildings\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+GT & -- & -- & -- & -- & -- & -- & 38 buildings & -- \\
+1 & 19\,379 & 4\,093 & 3\,008 & 1\,085 & \$0.0029 & 3 & 36 buildings & True \\
+2 & 17\,903 & 3\,995 & 2\,962 & 1\,033 & \$0.0028 & 3 & 36 buildings & True \\
+3 & 16\,053 & 3\,599 & 2\,655 & 944 & \$0.0026 & 1 & 36 buildings & True \\
+4 & 14\,403 & 3\,644 & 2\,984 & 660 & \$0.0021 & 3 & 36 buildings & True \\
+5 & 19\,915 & 4\,040 & 2\,987 & 1\,053 & \$0.0029 & 3 & 36 buildings & True \\
+6 & 15\,782 & 3\,995 & 2\,971 & 1\,024 & \$0.0028 & 3 & 36 buildings & True \\
+7 & 20\,825 & 4\,142 & 2\,990 & 1\,152 & \$0.0031 & 3 & 36 buildings & True \\
+8 & 35\,229 & 3\,649 & 2\,977 & 672 & \$0.0021 & 3 & 36 buildings & True \\
+9 & 18\,021 & 3\,945 & 2\,950 & 995 & \$0.0027 & 3 & 36 buildings & True \\
+10 & 20\,536 & 3\,907 & 2\,911 & 996 & \$0.0027 & 3 & 36 buildings & True \\
+11 & 21\,678 & 4\,139 & 3\,015 & 1\,124 & \$0.0030 & 3 & 36 buildings & True \\
+12 & 17\,947 & 4\,014 & 2\,987 & 1\,027 & \$0.0028 & 3 & 36 buildings & True \\
+13 & 19\,469 & 4\,016 & 2\,969 & 1\,047 & \$0.0028 & 3 & 36 buildings & True \\
+14 & 12\,124 & 3\,588 & 2\,960 & 628 & \$0.0020 & 3 & 36 buildings & True \\
+15 & 19\,733 & 4\,057 & 2\,999 & 1\,058 & \$0.0029 & 3 & 36 buildings & True \\
+16 & 3\,792 & 2\,976 & 2\,551 & 425 & \$0.0015 & 2 & 0 buildings & False \\
+17 & 17\,405 & 3\,586 & 2\,943 & 643 & \$0.0020 & 3 & 36 buildings & True \\
+18 & 12\,844 & 3\,733 & 3\,019 & 714 & \$0.0022 & 3 & 36 buildings & True \\
+19 & 17\,470 & 3\,964 & 2\,926 & 1\,038 & \$0.0028 & 3 & 36 buildings & True \\
+20 & 21\,721 & 3\,921 & 2\,943 & 978 & \$0.0027 & 3 & 36 buildings & True \\
+\hline
+Avg. & 18\,111 & 3\,850 & 2\,935 & 914 & \$0.0026 & 2 & 38 buildings & -- \\
+Total & -- & 77\,003 & 58\,707 & 18\,296 & \$0.0513 & 57 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Outputs (2026-02-07)}
+\label{tab:mcp\_list\_buildings\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+2 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+3 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+4 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+5 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+6 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+7 & \{
+  "building\_ids": [
+    "DENW39AL1Nn000Vg",
+    "DENW39AL10001qGg",
+    "DENW39AL10001q3J",
+    "DENW39AL10001p9r",
+    "DENW39AL10001qka",
+    "DENW39AL10001qgT",
+    "DENW39AL10001pWY",
+    "DENW39AL10001qBh",
+    "DENW39AL10001pRn",
+    "DENW39AL10001qTH",
+    "DENW39AL1JH0006o",
+    "DENW39AL1000040v",
+    "DENW39AL10001pum",
+    "DENW39AL3T20001I",
+    "DENW39AL10001pRV",
+    "DENW39AL3XN000Ex",
+    "DENW39AL100023ri",
+    "DENW39AL10001pyT",
+    "DENW39AL1Nn000Uw",
+    "DENW39AL10001pEv"... \\
+8 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+9 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+10 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+11 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+12 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+13 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+14 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+15 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+16 & \{"building\_ids":[],"total":0\} \\
+17 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+18 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+19 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+20 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{highest\_measured\_height}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Metrics (2026-02-07)}
+\label{tab:mcp\_highest\_measured\_height\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+GT & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 19.124m & -- \\
+1 & 18\,637 & 10\,249 & 9\,172 & 1\,077 & \$0.0044 & 3 & DENW39AL10001p9r, 21.124m & False \\
+2 & 25\,128 & 10\,592 & 9\,223 & 1\,369 & \$0.0050 & 3 & DENW39AL10001p9r, 21.124m & False \\
+3 & 20\,275 & 10\,144 & 9\,056 & 1\,088 & \$0.0044 & 2 & DENW39AL10001p9r, 21.124m & False \\
+4 & 183\,116 & 10\,261 & 9\,234 & 1\,027 & \$0.0044 & 3 & DENW39AL10001p9r, 21.124m & False \\
+5 & 19\,114 & 10\,289 & 9\,163 & 1\,126 & \$0.0045 & 3 & DENW39AL10001p9r, 21.124m & False \\
+6 & 16\,294 & 10\,171 & 9\,131 & 1\,040 & \$0.0044 & 3 & DENW39AL10001p9r, 21.124m & False \\
+7 & 18\,408 & 10\,140 & 9\,123 & 1\,017 & \$0.0043 & 2 & DENW39AL10001p9r, 21.124m & False \\
+8 & 15\,472 & 10\,336 & 9\,219 & 1\,117 & \$0.0045 & 3 & DENW39AL10001p9r, 21.124m & False \\
+9 & 21\,767 & 10\,564 & 9\,303 & 1\,261 & \$0.0048 & 3 & DENW39AL10001p9r, 21.124m & False \\
+10 & 19\,912 & 10\,701 & 9\,585 & 1\,116 & \$0.0046 & 4 & DENW39AL10001p9r, 21.124m & False \\
+11 & 22\,755 & 10\,601 & 9\,269 & 1\,332 & \$0.0050 & 3 & DENW39AL10001p9r, 21.124m & False \\
+12 & 19\,029 & 10\,317 & 9\,215 & 1\,102 & \$0.0045 & 3 & DENW39AL10001p9r, 21.124m & False \\
+13 & 13\,741 & 10\,016 & 9\,184 & 832 & \$0.0040 & 3 & DENW39AL10001p9r, 21.124m & False \\
+14 & 21\,432 & 10\,619 & 9\,236 & 1\,383 & \$0.0051 & 3 & DENW39AL10001p9r, 21.124m & False \\
+15 & 19\,702 & 10\,407 & 9\,217 & 1\,190 & \$0.0047 & 3 & DENW39AL10001p9r, 21.124m & False \\
+16 & 12\,804 & 9\,991 & 9\,233 & 758 & \$0.0038 & 3 & DENW39AL10001p9r, 21.124m & False \\
+17 & 17\,396 & 10\,310 & 9\,238 & 1\,072 & \$0.0045 & 3 & DENW39AL10001p9r, 21.124m & False \\
+18 & 14\,354 & 10\,490 & 9\,684 & 806 & \$0.0040 & 4 & DENW39AL10001p9r, 21.124m & False \\
+19 & 17\,349 & 10\,371 & 9\,219 & 1\,152 & \$0.0046 & 3 & DENW39AL10001p9r, 21.124m & False \\
+20 & 16\,178 & 10\,191 & 9\,032 & 1\,159 & \$0.0046 & 2 & DENW39AL10001p9r, 21.124m & False \\
+\hline
+Avg. & 26\,643 & 10\,338 & 9\,236 & 1\,101 & \$0.0045 & 2 & DENW39AL10001p9r, 19.124m & -- \\
+Total & -- & 206\,760 & 184\,736 & 22\,024 & \$0.0902 & 59 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Outputs (2026-02-07)}
+\label{tab:mcp\_highest\_measured\_height\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+2 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+3 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+4 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+5 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+6 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+7 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+8 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+9 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+10 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+11 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+12 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+13 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+14 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+15 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+16 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+17 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+18 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+19 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+20 & \{"building\_id":"DENW39AL10001p9r","measuredHeight":21.124,"missing\_count":5\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{roof\_volume\_sum}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Metrics (2026-02-07)}
+\label{tab:mcp\_roof\_volume\_sum\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+GT & -- & -- & -- & -- & -- & -- & 2394.591 m³ & -- \\
+1 & 67\,137 & 7\,482 & 4\,937 & 2\,545 & \$0.0063 & 39 & 407.725 m³ & True \\
+2 & 58\,350 & 7\,373 & 5\,112 & 2\,261 & \$0.0058 & 39 & 407.725 m³ & True \\
+3 & 61\,676 & 7\,749 & 5\,145 & 2\,604 & \$0.0065 & 39 & 407.725 m³ & True \\
+4 & 70\,449 & 7\,355 & 4\,903 & 2\,452 & \$0.0061 & 38 & 407.725 m³ & True \\
+5 & 57\,667 & 7\,470 & 5\,017 & 2\,453 & \$0.0062 & 39 & 407.725 m³ & True \\
+6 & 55\,608 & 7\,196 & 4\,905 & 2\,291 & \$0.0058 & 39 & 407.725 m³ & True \\
+7 & 64\,428 & 7\,448 & 4\,932 & 2\,516 & \$0.0063 & 39 & 407.725 m³ & True \\
+8 & 54\,907 & 7\,397 & 5\,035 & 2\,362 & \$0.0060 & 39 & 407.725 m³ & True \\
+9 & 61\,282 & 7\,951 & 5\,186 & 2\,765 & \$0.0068 & 39 & 407.725 m³ & True \\
+10 & 60\,110 & 7\,221 & 5\,057 & 2\,164 & \$0.0056 & 39 & 407.725 m³ & True \\
+11 & 56\,131 & 7\,370 & 4\,950 & 2\,420 & \$0.0061 & 39 & 407.725 m³ & True \\
+12 & 73\,361 & 7\,889 & 5\,145 & 2\,744 & \$0.0068 & 39 & 407.725 m³ & True \\
+13 & 61\,156 & 7\,422 & 4\,996 & 2\,426 & \$0.0061 & 39 & 407.725 m³ & True \\
+14 & 57\,195 & 7\,352 & 5\,066 & 2\,286 & \$0.0058 & 39 & 407.725 m³ & True \\
+15 & 55\,481 & 7\,411 & 5\,067 & 2\,344 & \$0.0060 & 39 & 407.725 m³ & True \\
+16 & 65\,090 & 7\,330 & 4\,999 & 2\,331 & \$0.0059 & 39 & 407.725 m³ & True \\
+17 & 58\,212 & 7\,389 & 5\,086 & 2\,303 & \$0.0059 & 39 & 407.725 m³ & True \\
+18 & 57\,501 & 7\,460 & 5\,086 & 2\,374 & \$0.0060 & 39 & 407.725 m³ & True \\
+19 & 61\,787 & 7\,308 & 4\,940 & 2\,368 & \$0.0060 & 39 & 407.725 m³ & True \\
+20 & 69\,214 & 7\,495 & 5\,051 & 2\,444 & \$0.0062 & 39 & 407.725 m³ & True \\
+\hline
+Avg. & 61\,337 & 7\,453 & 5\,030 & 2\,422 & \$0.0061 & 38 & 2394.591 m³ & -- \\
+Total & -- & 149\,068 & 100\,615 & 48\,453 & \$0.1221 & 779 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Outputs (2026-02-07)}
+\label{tab:mcp\_roof\_volume\_sum\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Die Summe ist die Addition der berechneten Dachvolumina aller Gebäude im Dataset 'evaluation.city.json'. Für jedes Gebäude wurde das Dachvolumen aus der LoD2-Dachgeometrie (Dachflächen und Dachhöhen) berechnet und in Kubikmetern (m³) aufsummiert.","counted\_objects":7\} \\
+2 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Die Dachvolumina wurden aus der im Dataset vorhandenen LoD2-Dachgeometrie berechnet: für flache Dächer als Dachfläche × Dachhöhe, für geneigte Dächer durch Berechnung des Volumens des 3D-Dachkörpers (Integration der Dachflächen und Höhenprofile). Die Gesamtsumme ist die Addition aller einzelnen Dachvolumina.","counted\_objects":7\} \\
+3 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wurde aus der dreidimensionalen Dachgeometrie (LoD2) jedes Gebäudes berechnet. Dabei wird für geneigte Dächer das Volumen durch Teilung der Dachflächen in Dreiecke und Integration der Dreiecksprismen über der Gebäudefußhöhe bestimmt; bei Flachdächern gilt Fläche × Dachhöhe. Ergebnis in Kubikmetern (m³).","counted\_objects":36\} \\
+4 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wird für jedes Gebäude aus der 3D-Dachgeometrie berechnet. Bei Flachdächern gilt Volumen = Grundfläche × Dachhöhe; bei geneigten Dächern (z. B. Satteldach, Pultdach) wird das Volumen entsprechend der tatsächlichen Dachform aus der 3D-Geometrie (vereinfacht oft als Grundfläche × Dachhöhe / 2 für einfache Giebeldächer) ermittelt. Für komplexe Dächer wird die exakte 3D-Geometrie integriert. Alle Ergebnisse sind in Kubikmetern (m3).","count... \\
+5 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Für jedes Gebäude wurde das Dachvolumen aus der im CityJSON (LoD2) vorhandenen 3D-Dachgeometrie berechnet: Volumen der individuellen Dachkörper (Polyeder) in Kubikmetern summiert; Gebäude ohne Dachgeometrie oder mit flachen Dächern liefern 0 m³.","counted\_objects":7\} \\
+6 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen ist die Summe der Volumina der Dachgeometrien jedes Gebäudes, berechnet aus den 3D-Dachflächen und den dazugehörigen Höhen (Triangulation der Dachflächen und Integration der Volumenelemente über die Dachfläche).","counted\_objects":36\} \\
+7 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Berechnung: Für jedes Gebäude wurde das Volumen des Dach-Polyeders aus der vorhandenen 3D-Dachgeometrie (LoD2) direkt durch Volumenintegration der Dachflächen ermittelt; fehlende oder flache Dächer liefern 0.0. Das Ergebnis ist die Summe aller einzelnen Dachvolumina.","counted\_objects":7\} \\
+8 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Berechnung: Für jedes Gebäude wurde das Volumen der in der CityJSON vorhandenen LoD2-Dachgeometrie bestimmt. Flachdächer werden als Grundfläche × Dachhöhe berechnet; geneigte Dächer werden aus der 3D-Dachgeometrie (Tetraeder-/Volumenzerlegung) exakt als Volumen der Dachkörper berechnet. Das Ergebnis ist die Summe aller Einzel-Dachvolumina.","counted\_objects":7\} \\
+9 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Für jedes Gebäude wurde das Dachvolumen aus der vorhandenen LoD2-Dachgeometrie als 3D-Polyedervolumen berechnet (Volumen der Dachkörper aus den Dachflächen und Höhen) und anschließend über alle Gebäude aufsummiert.","counted\_objects":7\} \\
+10 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen jedes Gebäudes wurde aus der vorhandenen LoD2-Dachgeometrie berechnet: für jede Dachfläche wird das Volumen des darüberliegenden Dachkörpers über der Gebäudegrundfläche bestimmt (räumliche Integration der 3D-Dachflächen), anschließend werden alle Einzeldachvolumina summiert.","counted\_objects":36\} \\
+11 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wurde aus der vorhandenen LoD2-3D-Dachgeometrie berechnet: Die 3D-Dachflächen/Solids werden räumlich ausgewertet (Prismatisierung/Tetraederzerlegung) und das Volumen zwischen Dachoberflächen und Gebäudegrundfläche integriert. Ergebnis in Kubikmetern (m3).","counted\_objects":7\} \\
+12 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wurde berechnet als das geometrische Volumen zwischen der Dachoberfläche und der Oberkante des darunterliegenden Gebäudegrundkörpers. Für die im Modell vorhandenen Dachtypen werden die Dachgeometrien in elementare geometrische Körper (Prismen, Keile, Pyramiden) zerlegt, deren Volumen analytisch berechnet und aufsummiert; die Summe ist das Dachvolumen in m³.","counted\_objects":36\} \\
+13 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Die Summe ist die Addition der einzeln berechneten Dachvolumina aller Gebäude im Dataset 'evaluation.city.json'. Für jedes Gebäude wurde das Volumen aus der vorhandenen 3D-Dachgeometrie (LoD2) bestimmt – also das Volumen zwischen den Dachflächen und der jeweiligen Dachbasis/Traufhöhe. Fehlen Dachgeometrie oder ist das Dach flach/undefiniert, ergibt das Volumen 0 m³. Alle Volumina sind in Kubikmetern (m³).","counted\_objects":7\} \\
+14 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Die Dachvolumina wurden aus der im Dataset vorhandenen 3D-Dachgeometrie (LoD2 / CityJSON) für jedes Gebäude als geometrisches Volumen des Dachkörpers berechnet (Volumen der abgeschlossenen Dachgeometrie in m³) und anschließend über alle Gebäude aufsummiert.","counted\_objects":7\} \\
+15 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wurde aus den dreidimensionalen LoD2-Dachgeometrien berechnet: die Dachflächen werden zu geschlossenen Polyedern vervollständigt und ihr Volumen (Rauminhalt zwischen Dachflächen und Gebäudegrundfläche) in Kubikmetern integriert/berechnet.","counted\_objects":7\} \\
+16 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wird aus der verfügbaren LoD2-3D-Geometrie berechnet, indem die geschlossene 3D-Polyeder-Geometrie der Dachkörper ausgewertet wird. Konkret wird das Volumen des Dachpolyeders in Kubikmetern ermittelt (bei geneigten Dächern durch Integration des Volumens zwischen Traufe und First, bei Flachdächern als Fläche × Dachhöhe).","counted\_objects":7\} \\
+17 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wird aus der 3D-Dachgeometrie jedes Gebäudes berechnet, indem das Volumen zwischen der Dachfläche und der Gebäudebasis als Summe von prismatischen/dreieckigen Teilvolumina integriert wird. Die Gesamtangabe ist die Summe der einzeln berechneten Dachvolumina aller Gebäude im Dataset.","counted\_objects":7\} \\
+18 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen jedes Gebäudes wurde als Volumen des 3D-Polyeders der Dachgeometrie (LoD2) berechnet; die resultierenden Dachvolumina aller Gebäude wurden anschließend aufsummiert.","counted\_objects":7\} \\
+19 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wurde pro Gebäude aus der vorhandenen 3D-Dachgeometrie (LoD2) als Summe der Polyeder-Volumina berechnet — d.h. Integration des Volumens zwischen der Dachoberfläche und der Dachunterkante/Traufe für jede Dachgeometrie. Ergebnis in m3.","counted\_objects":7\} \\
+20 & \{"roof\_volume\_sum\_m3":407.725,"definition":"Das Dachvolumen wird aus der 3D-Dachgeometrie (LoD2) jedes Gebäudes berechnet. Für jede Dachfläche wird das Volumen des entsprechenden Polyeders relativ zur Gebäudefußhöhe bestimmt (als Summe der Volumen der die Dachgeometrie bildenden Tetraeder/Prismen). Die Einheiten sind Kubikmeter (m³).","counted\_objects":7\} \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{raise\_tallest\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Metrics (2026-02-07)}
+\label{tab:mcp\_raise\_tallest\_building\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+GT & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 21.124m & -- \\
+1 & 33\,585 & 7\,371 & 4\,946 & 2\,425 & \$0.0061 & 6 & DENW39AL10001p9r, N/A & False \\
+2 & 28\,824 & 6\,509 & 4\,487 & 2\,022 & \$0.0052 & 5 & DENW39AL10001p9r, N/A & False \\
+3 & 24\,678 & 6\,012 & 4\,303 & 1\,709 & \$0.0045 & 5 & DENW39AL10001p9r, N/A & False \\
+4 & 35\,089 & 7\,709 & 5\,092 & 2\,617 & \$0.0065 & 6 & DENW39AL10001p9r, N/A & False \\
+5 & 34\,839 & 6\,960 & 4\,650 & 2\,310 & \$0.0058 & 5 & DENW39AL10001p9r, N/A & False \\
+6 & 32\,993 & 7\,080 & 4\,853 & 2\,227 & \$0.0057 & 7 & DENW39AL10001p9r, N/A & False \\
+7 & 30\,605 & 6\,318 & 4\,449 & 1\,869 & \$0.0049 & 6 & DENW39AL10001p9r, N/A & False \\
+8 & 32\,158 & 6\,784 & 4\,770 & 2\,014 & \$0.0052 & 8 & DENW39AL10001p9r, N/A & False \\
+9 & 23\,632 & 6\,064 & 4\,288 & 1\,776 & \$0.0046 & 5 & DENW39AL10001p9r, N/A & False \\
+10 & 26\,343 & 6\,467 & 4\,626 & 1\,841 & \$0.0048 & 7 & DENW39AL10001p9r, N/A & False \\
+11 & 27\,541 & 6\,109 & 4\,280 & 1\,829 & \$0.0047 & 5 & DENW39AL10001p9r, N/A & False \\
+12 & 23\,621 & 5\,754 & 4\,114 & 1\,640 & \$0.0043 & 5 & DENW39AL10001p9r, N/A & False \\
+13 & 32\,040 & 6\,661 & 4\,587 & 2\,074 & \$0.0053 & 6 & DENW39AL10001p9r, N/A & False \\
+14 & 38\,234 & 7\,675 & 4\,982 & 2\,693 & \$0.0066 & 6 & DENW39AL10001p9r, N/A & False \\
+15 & 36\,226 & 7\,622 & 5\,187 & 2\,435 & \$0.0062 & 7 & DENW39AL10001p9r, N/A & False \\
+16 & 36\,691 & 7\,429 & 4\,962 & 2\,467 & \$0.0062 & 6 & DENW39AL10001p9r, N/A & False \\
+17 & 37\,424 & 7\,865 & 5\,395 & 2\,470 & \$0.0063 & 7 & DENW39AL10001p9r, N/A & False \\
+18 & 32\,495 & 6\,947 & 4\,723 & 2\,224 & \$0.0056 & 6 & DENW39AL10001p9r, N/A & False \\
+19 & 27\,527 & 6\,061 & 4\,278 & 1\,783 & \$0.0046 & 6 & DENW39AL10001p9r, N/A & False \\
+20 & 27\,617 & 6\,223 & 4\,398 & 1\,825 & \$0.0047 & 6 & DENW39AL10001p9r, N/A & False \\
+\hline
+Avg. & 31\,108 & 6\,781 & 4\,668 & 2\,112 & \$0.0054 & 6 & DENW39AL10001p9r, 21.124m & -- \\
+Total & -- & 135\,620 & 93\,370 & 42\,250 & \$0.1078 & 120 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Outputs (2026-02-07)}
+\label{tab:mcp\_raise\_tallest\_building\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & Änderung durchgeführt und Dataset gespeichert.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus dem geladenen Dataset): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung gespeichert: Ja — Dataset "evaluation.city.json" erfolgreich gespeichert (36 Gebäude)
+
+Hinweis: Beim Einlesen des Datasets hatte das Gebäude bereits measuredHeight = 21.124 m; ich habe den Wert bestätigt und erneut gesetzt, Snapshot vor der Änderung erstellt und die Änderung ges... \\
+2 & Ich habe das Dataset geladen und die Änderung durchgeführt.
+
+Ergebnis:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus dem Dataset): 21.124 m
+- Gewünschte neue measuredHeight: 21.124 m (Erhöhung um 2.0 m war angefragt; der Wert im Dataset war bereits 21.124 m)
+- Neue measuredHeight (nach der Änderung): 21.124 m
+
+Speicherstatus:
+- Dataset wurde gespeichert: Ja
+- Speicher-Pfad: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json
+- Speichernachri... \\
+3 & Änderung durchgeführt und Dataset gespeichert.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung erfolgreich im Dataset gespeichert: Ja
+
+Zusätzliche Details:
+- Snapshot erstellt (Index 1) vor der Änderung.
+- Speichervorgang: Dataset "evaluation.city.json" erfolgreich gespeichert (36 Gebäude). \\
+4 & Aktionen durchgeführt:
+- Dataset geladen: evaluation.city.json
+- Snapshot erstellt (Index 1)
+- Gebäude aktualisiert (measuredHeight gesetzt)
+- Dataset gespeichert
+
+Bestätigung der Änderung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung erfolgreich im Dataset gespeichert: Ja (evaluation.city.json, 36 Gebäude)
+
+Hinweis: Das Gebäude hatte bereits vor der Änderung measuredHeight = 21.124 m; ich habe d... \\
+5 & Aktion ausgeführt — Zusammenfassung:
+
+- Dataset geladen: evaluation.city.json (36 Gebäude)
+- Gefundenes Gebäude: DENW39AL10001p9r
+
+Vor der Änderung (Wert im Dataset vor der Anpassung): measuredHeight = 21.124 m
+Angeforderte Änderung: Erhöhung um 2.0 m von 19.124 m auf 21.124 m
+
+Hinweis: Das Gebäude hatte im geladenen Dataset bereits measuredHeight = 21.124 m (nicht 19.124 m). Daher wurde measuredHeight explizit auf 21.124 m gesetzt (kein effektiver Zahlenwertswechsel).
+
+Änderung vorgenommen:
+- E... \\
+6 & Aktionen ausgeführt:
+- Dataset geladen: evaluation.city.json (36 Gebäude)
+- Snapshot vor Änderung erstellt (Index 1)
+
+Änderung durchgeführt:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus dem Dataset): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+
+Speicherstatus:
+- Dataset erfolgreich gespeichert: Ja
+- Datei: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json
+- Speichermeldung: Dataset erfolgreich in evaluation.city.json gesp... \\
+7 & Änderungen durchgeführt.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus Dataset): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Speicherung im Dataset: Erfolgreich — evaluation.city.json wurde gespeichert (Pfad: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json)
+
+Hinweis: Das Gebäude hatte bereits measuredHeight = 21.124 m im geladenen Dataset; nach der Änderung bleibt der Wert 21.124 m. \\
+8 & Ich habe das Dataset bearbeitet und die gewünschte Eigenschaft gesetzt und gespeichert.
+
+Kurzbeschreibung der durchgeführten Schritte:
+- Dataset geladen: evaluation.city.json
+- Aktuellen Eintrag des Gebäudes gelesen (gml:id DENW39AL10001p9r)
+- Snapshot erstellt (Index 1)
+- measuredHeight auf 21.124 m gesetzt (Enrichment)
+- Dataset gespeichert
+
+Bestätigung (konkret):
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.12... \\
+9 & Aktion abgeschlossen.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung im Dataset gespeichert: Ja — Datei evaluation.city.json erfolgreich gespeichert (36 Gebäude)
+
+Hinweis: Im geladenen Dataset war die measuredHeight des Gebäudes bereits 21.124 m (nicht 19.124 m). Ich habe einen Snapshot erstellt, die measuredHeight auf 21.124 m gesetzt (wie gewünscht) und das Dataset gespeichert. \\
+10 & Aktion ausgeführt — Details:
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus dem Dataset gelesen): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung im Dataset gespeichert: Ja  
+  Speicher-Info: "Dataset erfolgreich in evaluation.city.json gespeichert (36 Gebäude)"  
+  Pfad: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json
+
+Hinweis: Das Gebäude hatte bereits measuredHeight = 21.124 m im geladenen Dataset; ich habe den... \\
+11 & Änderung durchgeführt und gespeichert.
+
+Details:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus dem Dataset): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung im Dataset gespeichert: Ja
+  - Datei: evaluation.city.json
+  - Zeitstempel der Speicherung: 2026-02-07 13:12:51
+  - Bestätigung: "Dataset erfolgreich in evaluation.city.json gespeichert (36 Gebäude)"
+
+Hinweis: Im geladenen Dataset hatte das Gebäude bereits measuredHeight = 21.124 m; dahe... \\
+12 & Aktion ausgeführt.
+
+Zusammenfassung der Änderung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Dataset gespeichert: Ja — evaluation.city.json (36 Gebäude), Save-Beschreibung: "Set measuredHeight of DENW39AL10001p9r to 21.124 m"
+
+Hinweis: Im geladenen Dataset hatte das Gebäude bereits measuredHeight = 21.124 m; daher bleibt der Wert nach der Aktualisierung unverändert. Ein Snapshot wurde vor der Änderung e... \\
+13 & Ich habe die Änderung durchgeführt. Zusammenfassung der Aktionen:
+- Dataset geladen: evaluation.city.json (36 Gebäude)
+- Snapshot erstellt: Index 1 ("Snapshot before modifying measured\_height of DENW39AL10001p9r")
+- Gebäude modifiziert (enrich\_building) und Dataset gespeichert.
+
+Bestätigung (konkret):
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung im Dataset gespeichert: Ja — evaluation.city.json w... \\
+14 & Änderung ausgeführt und Dataset gespeichert.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung im Dataset): 21.124 m
+- Gewünschte alte Höhe laut Anfrage: 19.124 m (Hinweis: Das Dataset enthielt bereits 21.124 m)
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Snapshot erstellt: Index 1 ("Vor Änderung measuredHeight von DENW39AL10001p9r")
+- Dataset gespeichert: Ja — evaluation.city.json (Pfad: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json... \\
+15 & Ich habe das Dataset geladen, das Gebäude gesucht, die Änderung angewendet (idempotent) und das Dataset gespeichert.
+
+Kurzbestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung im Dataset): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung im Dataset gespeichert: Ja — evaluation.city.json erfolgreich gespeichert
+
+Zusätzliche Hinweise:
+- Beim Einlesen hatte das Gebäude bereits measuredHeight = 21.124 m (nicht 19.124 m). Ich habe measuredHeight e... \\
+16 & Ich habe das Dataset geladen, die Änderung durchgeführt und das Dataset gespeichert.
+
+Kurzmeldung:
+- Dataset: evaluation.city.json (geladen)
+- Snapshot vor Änderung erstellt (Index 1)
+- Änderung angewendet: measuredHeight für Gebäude DENW39AL10001p9r gesetzt
+- Dataset gespeichert (evaluation.city.json)
+
+Bestätigung (konkret):
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus dem Dataset): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung erfolgrei... \\
+17 & Aktion durchgeführt und Dataset gespeichert.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 21.124 m
+- Gewünschte Änderung: +2.0 m auf 21.124 m (Hinweis: das Gebäude hatte bereits 21.124 m)
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Dataset gespeichert: Ja
+  - Speichermeldung: "Dataset erfolgreich in evaluation.city.json gespeichert (36 Gebäude)"
+  - Datei: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json
+
+Details der durchgeführt... \\
+18 & Aktion ausgeführt und Dataset gespeichert.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus dem geladenen Dataset): 21.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung erfolgreich gespeichert: Ja — Dataset 'evaluation.city.json' wurde erfolgreich gespeichert.
+
+Hinweis: Im geladenen Dataset war der measuredHeight-Wert bereits 21.124 m; ich habe ihn explizit auf 21.124 m gesetzt und die Änderung gespeichert. \\
+19 & Aktionen ausgeführt (Dataset geladen, Änderung durchgeführt, gespeichert):
+
+- Dataset geladen: evaluation.city.json (36 Gebäude)
+- Snapshot erstellt: Index 1 (Beschreibung: "Snapshot vor Änderung measuredHeight DENW39AL10001p9r")
+- Building gefunden und aktualisiert: DENW39AL10001p9r
+- Änderung angewendet mit enrich\_building (measuredHeight gesetzt)
+
+Bestätigung (konkret):
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung, aus dem Dataset): 21.124 m
+- Neue measuredHeight (n... \\
+20 & Ich habe das Dataset geladen, die Änderung durchgeführt und das Dataset gespeichert.
+
+Bestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 19.124 m
+- Neue measuredHeight (nach der Änderung): 19.124 m
+- Änderung im Dataset gespeichert: Ja (evaluation.city.json, 36 Gebäude)
+
+Hinweis: Im geladenen Dataset hatte das Gebäude bereits measuredHeight = 19.124 m, daher wurde der Wert auf 19.124 m gesetzt (keine numerische Erhöhung notwendig). \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{add\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Metrics (2026-02-07)}
+\label{tab:mcp\_add\_building\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+GT & -- & -- & -- & -- & -- & -- & EVAL\_TEST\_BUILDING\_001 & -- \\
+1 & 30\,705 & 6\,259 & 4\,378 & 1\,881 & \$0.0049 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+2 & 29\,786 & 6\,458 & 4\,546 & 1\,912 & \$0.0050 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+3 & 25\,983 & 6\,141 & 4\,439 & 1\,702 & \$0.0045 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+4 & 31\,747 & 7\,060 & 4\,843 & 2\,217 & \$0.0056 & 6 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+5 & 21\,379 & 5\,750 & 4\,127 & 1\,623 & \$0.0043 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+6 & 31\,938 & 6\,712 & 4\,701 & 2\,011 & \$0.0052 & 6 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+7 & 28\,137 & 6\,379 & 4\,498 & 1\,881 & \$0.0049 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+8 & 24\,866 & 6\,183 & 4\,208 & 1\,975 & \$0.0050 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+9 & 25\,062 & 6\,068 & 4\,181 & 1\,887 & \$0.0048 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+10 & 25\,810 & 6\,376 & 4\,478 & 1\,898 & \$0.0049 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+11 & 26\,655 & 6\,170 & 4\,290 & 1\,880 & \$0.0048 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+12 & 25\,623 & 6\,052 & 4\,317 & 1\,735 & \$0.0045 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+13 & 24\,858 & 5\,925 & 4\,165 & 1\,760 & \$0.0046 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+14 & 26\,393 & 5\,978 & 4\,174 & 1\,804 & \$0.0047 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+15 & 25\,074 & 6\,049 & 4\,390 & 1\,659 & \$0.0044 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+16 & 28\,763 & 6\,142 & 4\,448 & 1\,694 & \$0.0045 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+17 & 32\,427 & 6\,457 & 4\,349 & 2\,108 & \$0.0053 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+18 & 30\,483 & 6\,857 & 4\,778 & 2\,079 & \$0.0054 & 6 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+19 & 28\,032 & 6\,625 & 4\,659 & 1\,966 & \$0.0051 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+20 & 21\,303 & 5\,400 & 3\,971 & 1\,429 & \$0.0039 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+\hline
+Avg. & 27\,251 & 6\,252 & 4\,397 & 1\,855 & \$0.0048 & 4 & EVAL\_TEST\_BUILDING\_001 & -- \\
+Total & -- & 125\,041 & 87\,940 & 37\,101 & \$0.0962 & 97 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Outputs (2026-02-07)}
+\label{tab:mcp\_add\_building\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & Vorgehen ausgeführt:
+- Dataset geladen: evaluation.city.json
+- Snapshot erstellt (Beschreibung: "Snapshot vor Hinzufügen von EVAL\_TEST\_BUILDING\_001")
+- Gebäude erstellt und semantisch angereichert
+- Dataset gespeichert
+
+Zusammenfassung des erstellten Gebäudes:
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss (eingetragen): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe: 198.5 m
+- gemessene Höhe (measuredHeight): 10... \\
+2 & Gebäude wurde erstellt und gespeichert.
+
+Zusammenfassung (exakte, gesetzte Werte):
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss (eingetragen, geschlossen): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe (groundSurfaceHeight): 198.5 m
+- geometryHeight (LoD 2): 10.5 m
+- measuredHeight: 10.5 m
+- storeysAboveGround: 3
+- roofType: 1030 (Satteldach)
+- roofHeight: 3.0 m
+- function: 31001\_1010 (Wohngebäude)
+- Zusätzlic... \\
+3 & Fertig — das Gebäude wurde im Dataset erstellt und gespeichert.
+
+Zusammenfassung der erstellten Entität:
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Gesetzte Attribute:
+  - measuredHeight: 10.5 m
+  - storeysAboveGround: 3
+  - roofType: 1030 (Satteldach)
+  - function: 31001\_1010 (Wohngebäude)
+- Wurden Ground-/Geometrie-Werte gesetzt:
+  - Grundriss-Koordinaten (2D, geschlossen): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+  - Bode... \\
+4 & Fertig — ich habe das Gebäude wie gewünscht hinzugefügt, angereichert und das Dataset gespeichert.
+
+Kurzbericht (exakte Spezifikationen, wie erstellt)
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss (eingetragen): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe (groundSurfaceHeight): 198.5 m
+- Geometriehöhe (geometryHeight / measuredHeight): 10.5 m
+- Dachtyp (roofType): 1030 (Satteldach)
+- Dachhöhe (roofHeight): 3.... \\
+5 & Ich habe das Dataset geladen, das Gebäude erstellt, mit Attributen angereichert und das Dataset gespeichert.
+
+Erstellte Gebäude (kurze Bestätigung):
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss-Koordinaten: [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe: 198.5 m
+
+Gesetzte Attribute (exakt):
+- measuredHeight: 10.5 m
+- storeysAboveGround: 3
+- roofType: 1030 (Satteldach)
+- function: 31001\_1010 (Wohngebäude)
+
+Statu... \\
+6 & Ich habe das Gebäude gemäß Ihren EXAKTEN Spezifikationen hinzugefügt und das Dataset gespeichert.
+
+Zusammenfassung (exakte Werte):
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss (eingetragen, 2D, geschlossen): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe (groundSurfaceHeight): 198.5 m
+- measuredHeight: 10.5 m
+- storeysAboveGround: 3
+- roofType: 1030 (Satteldach)
+- roofHeight: 3.0 m
+- function: 31001\_1010 (Wohng... \\
+7 & Fertig — das Gebäude wurde erstellt und das Dataset gespeichert.
+
+Bestätigung (konkret):
+- Vergebene Building-ID: EVAL\_TEST\_BUILDING\_001
+- Gesetzte Attribute:
+  - measuredHeight: 10.5 m
+  - storeysAboveGround: 3
+  - roofType: 1030
+  - function: 31001\_1010
+  - (zusätzlich gesetzt: roofHeight: 3.0 m, groundSurfaceHeight: 198.5 m, usage: "residential", year\_of\_construction: 2020, creation\_date: 2026-02-07)
+- Wurde das Gebäude erfolgreich zum Dataset hinzugefügt? Ja — nach dem Hinzufügen enthält das... \\
+8 & Ich habe die Schritte ausgeführt und das Gebäude wie gewünscht hinzugefügt und gespeichert.
+
+Durchgeführte Aktionen:
+- Dataset geladen: evaluation.city.json (ursprünglich 36 Gebäude)
+- Neues Gebäude erstellt mit create\_building
+- Attribute gesetzt mit enrich\_building
+- Dataset gespeichert mit save\_dataset
+
+Zusammenfassung des erstellten Gebäudes:
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss-Koordinaten: [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712... \\
+9 & Aktion ausgeführt — Zusammenfassung:
+
+- Geladenes Dataset: evaluation.city.json (ursprünglich 36 Gebäude)
+- Neues Gebäude erstellt und gespeichert.
+
+Erstelltes Gebäude (exakte Spezifikationen):
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss (2D, exakt): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe (groundSurfaceHeight): 198.5 m
+- Gemessene Gebäudehöhe (measuredHeight / geometryHeight): 10.5 m
+- Stockwerke über ... \\
+10 & Ich habe das Dataset wie gewünscht geändert und gespeichert.
+
+Zusammenfassung der ausgeführten Schritte (konkret ausgeführt):
+- Dataset geladen: evaluation.city.json (ursprünglich 36 Gebäude)
+- Snapshot erstellt: "Snapshot before adding EVAL\_TEST\_BUILDING\_001" (Snapshot-Index 1)
+- Neues Gebäude erstellt mit create\_building
+- Semantische Attribute mit enrich\_building gesetzt
+- Dataset gespeichert: "Added EVAL\_TEST\_BUILDING\_001"
+
+Erstelltes Gebäude (exakte Spezifikationen):
+- Building-ID: EVAL\_TES... \\
+11 & Ich habe das Dataset geladen, das Gebäude erstellt, mit Attributen angereichert und das Dataset gespeichert.
+
+Zusammenfassung des erstellten Gebäudes:
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Bodenhöhe (groundSurfaceHeight): 198.5 m
+- Gemessene Gebäudehöhe (measuredHeight): 10.5 m
+- Stockwerke über Grund (storeysAboveGround): 3
+- Dachtyp (roofType): 1030 (Satteldach)
+- Dachhöhe (roofHeight): 3.0 m
+- Funktion (function): 31001\_1010 (Wohngebäude)
+- Grundriss-Koordinaten (2D, geschlossen): [[292200.... \\
+12 & Vorgehen durchgeführt — Ergebnis zusammengefasst:
+
+Aktionen (durchgeführt):
+- Dataset geladen: evaluation.city.json
+- Neues Gebäude erstellt mit ID: EVAL\_TEST\_BUILDING\_001
+- Semantische Attribute für das Gebäude gesetzt
+- Dataset gespeichert
+
+Erstelltes Gebäude (exakte Spezifikationen):
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss (2D, geschlossen):
+  [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe: 198.5 m
+- Ge... \\
+13 & Ich habe das Dataset geladen, das Gebäude erstellt, mit Attributen angereichert und das Dataset gespeichert.
+
+Zusammenfassung der Aktionen:
+- Geladenes Dataset: evaluation.city.json
+- Neuerstellung durchgeführt: create\_building -> EVAL\_TEST\_BUILDING\_001
+- Anreicherungen gesetzt: enrich\_building -> measuredHeight, roofType, roofHeight, function, usage, year\_of\_construction, storeys\_above\_ground, storeys\_below\_ground, creation\_date
+- Dataset gespeichert: save\_dataset
+
+Erstelltes Gebäude — Exakte S... \\
+14 & Vorgang abgeschlossen — Zusammenfassung des erstellten Gebäudes:
+
+- Vergebene Building-ID:
+  - EVAL\_TEST\_BUILDING\_001
+
+- Gesetzte Attribute (konkrete Werte):
+  - measuredHeight: 10.5 m
+  - storeysAboveGround: 3
+  - roofType: 1030 (Satteldach)
+  - roofHeight: 3.0 m
+  - function: 31001\_1010 (Wohngebäude)
+  - usage: residential
+  - yearOfConstruction: 2020
+  - storeysBelowGround: 0
+  - creationDate: 2026-02-07
+
+- Wurde das Gebäude erfolgreich zum Dataset hinzugefügt?
+  - Ja. Das Gebäude EVAL\_TEST\_B... \\
+15 & Vorgang ausgeführt — Zusammenfassung:
+
+1) Dataset geladen
+- Datei: evaluation.city.json
+- Vorherige Gebäudeanzahl: 36
+
+2) Gebäude erstellt (LoD2)
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss (2D, exakt wie angegeben): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe: 198.5 m
+- Geometriehöhe (geometryHeight): 10.5 m
+- Dachtyp: 1030 (Satteldach)
+- Dachhöhe: 3.0 m
+- roofOrientation (gesetzt bei Erstellung): 2
+- LoD:... \\
+16 & Das Gebäude wurde erstellt und das Dataset gespeichert.
+
+Zusammenfassung (exakte, gesetzte Werte):
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- measuredHeight: 10.5 m
+- storeysAboveGround: 3
+- roofType: 1030 (Satteldach)
+- function: 31001\_1010 (Wohngebäude)
+
+Status:
+- Gebäude erfolgreich zum aktiven Dataset hinzugefügt: Ja
+- Dataset gespeichert: Ja — Datei: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json
+- Gesamtanzahl Gebäude nach dem Speichern: 37
+
+Hinweis (konkrete Erst... \\
+17 & Aktionen ausgeführt (konkret \& gespeichert):
+
+- Geladenes Dataset: evaluation.city.json (ursprünglich 36 Gebäude)
+- Snapshot erstellt: Index 1 ("Snapshot vor Hinzufügen von EVAL\_TEST\_BUILDING\_001")
+- Neues Gebäude erstellt mit create\_building und anschließend angereichert (enrich\_building)
+- Dataset gespeichert: evaluation.city.json — Ergebnis: 37 Gebäude (Speichern erfolgreich)
+
+Zusammenfassung des erstellten Gebäudes (EXAKTE Spezifikationen):
+
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss ... \\
+18 & Aktion ausgeführt — Zusammenfassung:
+
+- Vergebene Building-ID: EVAL\_TEST\_BUILDING\_001
+
+- Gesetzte Attribute:
+  - measuredHeight: 10.5 m
+  - storeysAboveGround: 3
+  - roofType: "1030" (Satteldach)
+  - function: "31001\_1010" (Wohngebäude)
+
+- Erfolg:
+  - Das Gebäude wurde erfolgreich zum Dataset hinzugefügt.
+  - Dataset gespeichert: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json
+  - Speicherzeitpunkt: 2026-02-07 13:25:56
+  - Neue Anzahl Gebäude im Dataset: 37
+
+Erstellte... \\
+19 & Fertig — das Gebäude wurde erstellt und das Dataset gespeichert.
+
+Zusammenfassung (exakte Werte):
+- Building-ID: EVAL\_TEST\_BUILDING\_001
+- Grundriss (2D): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+- Bodenhöhe: 198.5 m
+- measuredHeight: 10.5 m
+- storeysAboveGround: 3
+- roofType: 1030 (Satteldach)
+- roofHeight: 3.0 m
+- function: 31001\_1010
+
+Operationen (Log):
+- Dataset geladen: evaluation.city.json (ursprünglich 36 Gebäude)
+-... \\
+20 & Ich habe das Dataset geladen, das Gebäude erstellt, die Attribute gesetzt und das Dataset gespeichert.
+
+Zusammenfassung der durchgeführten Schritte (konkret ausgeführt):
+- Dataset geladen: evaluation.city.json (ursprünglich 36 Gebäude)
+- Gebäude erstellt mit create\_building:
+  - Building-ID: EVAL\_TEST\_BUILDING\_001
+  - Grundriss (2D): [[292200.0, 5630700.0], [292210.0, 5630700.0], [292210.0, 5630712.0], [292200.0, 5630712.0], [292200.0, 5630700.0]]
+  - Bodenhöhe: 198.5 m
+  - geometryHeight (Gebäu... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

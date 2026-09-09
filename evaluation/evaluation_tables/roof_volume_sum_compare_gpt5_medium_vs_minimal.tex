@@ -1,0 +1,37 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\caption{roof\_volume\_sum: Vergleich gpt-5 medium vs. gpt-5 minimal (MCP)}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{r r r r r}
+\toprule
+Run & Medium Wert (m$^3$) & Medium Tool Calls & Minimal Wert (m$^3$) & Minimal Tool Calls \\
+\midrule
+\textbf{Ground Truth} & \multicolumn{4}{l}{\textbf{407.725 m$^3$}} \\
+\midrule
+1 & 407.725 & 39 & 408.725 & 41 \\
+2 & 407.725 & 39 & 408.725 & 41 \\
+3 & 407.725 & 39 & 408.726 & 40 \\
+4 & 407.725 & 38 & 0 & 8 \\
+5 & 407.725 & 39 & 428.725 & 41 \\
+6 & 407.725 & 39 & 408.525 & 42 \\
+7 & 407.725 & 39 & 428.725 & 41 \\
+8 & 407.725 & 39 & 428.725 & 41 \\
+9 & 407.725 & 39 & 428.725 & 41 \\
+10 & 407.725 & 39 & 408.525 & 39 \\
+11 & 407.725 & 39 & 408.725 & 41 \\
+12 & 407.725 & 39 & 408.725 & 44 \\
+13 & 407.725 & 39 & 429.525 & 40 \\
+14 & 407.725 & 39 & 408.725 & 42 \\
+15 & 407.725 & 39 & 413.825 & 42 \\
+16 & 407.725 & 39 & 408.525 & 42 \\
+17 & 407.725 & 39 & 408.725 & 41 \\
+18 & 407.725 & 39 & 428.725 & 41 \\
+19 & 407.725 & 39 & 408.725 & 41 \\
+20 & 407.725 & 39 & 408.325 & 41 \\
+\midrule
+\textbf{Success Rate} & \multicolumn{2}{l}{\textbf{Medium: 20/20 (100.0\%)}} & \multicolumn{2}{l}{\textbf{Minimal: 0/20 (0.0\%)}} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

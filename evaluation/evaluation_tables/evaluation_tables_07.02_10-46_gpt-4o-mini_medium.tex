@@ -1,0 +1,706 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{07.02.2026, 10:46 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & gpt-4o-mini \\
+Reasoning Effort & medium \\
+Date & 07.02.2026, 10:46 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{mcp}
+
+\subsection{list\_buildings}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Metrics (2026-02-07)}
+\label{tab:mcp\_list\_buildings\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 36 buildings & -- \\
+1 & 7\,693 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+2 & 6\,812 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+3 & 8\,044 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+4 & 6\,846 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+5 & 8\,029 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+6 & 11\,303 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+7 & 7\,180 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+8 & 8\,080 & 3\,037 & 2\,628 & 409 & \$0.0015 & 3 & 36 buildings & True \\
+9 & 7\,273 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+10 & 7\,610 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+11 & 7\,212 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+12 & 7\,131 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+13 & 7\,082 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+14 & 6\,652 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+15 & 7\,499 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+16 & 6\,681 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+17 & 8\,345 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+18 & 6\,589 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+19 & 7\,645 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+20 & 6\,567 & 2\,990 & 2\,597 & 393 & \$0.0014 & 2 & 36 buildings & True \\
+\hline
+Avg. & 7\,513 & 2\,992 & 2\,598 & 393 & \$0.0014 & 2 & 36 buildings & -- \\
+Total & -- & 59\,847 & 51\,971 & 7\,876 & \$0.0287 & 41 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - list\_buildings - Outputs (2026-02-07)}
+\label{tab:mcp\_list\_buildings\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+2 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+3 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+4 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+5 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+6 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+7 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+8 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+9 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+10 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+11 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+12 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+13 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+14 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+15 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+16 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+17 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+18 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+19 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+20 & \{"building\_ids":["DENW39AL1Nn000Vg","DENW39AL10001qGg","DENW39AL10001q3J","DENW39AL10001p9r","DENW39AL10001qka","DENW39AL10001qgT","DENW39AL10001pWY","DENW39AL10001qBh","DENW39AL10001pRn","DENW39AL10001qTH","DENW39AL1JH0006o","DENW39AL1000040v","DENW39AL10001pum","DENW39AL3T20001I","DENW39AL10001pRV","DENW39AL3XN000Ex","DENW39AL100023ri","DENW39AL10001pyT","DENW39AL1Nn000Uw","DENW39AL10001pEv","DENW39AL100023sG","DENW39AL10001r2n","DENW39AL1Nn000VC","DENW39AL10001pMq","DENW39AL100023sE","DENW39A... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{highest\_measured\_height}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Metrics (2026-02-07)}
+\label{tab:mcp\_highest\_measured\_height\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 19.124m & -- \\
+1 & 30\,924 & 28\,967 & 28\,212 & 755 & \$0.0086 & 20 & N/A, N/A & False \\
+2 & 30\,437 & 13\,661 & 13\,062 & 599 & \$0.0045 & 20 & N/A, N/A & False \\
+3 & 21\,142 & 14\,525 & 13\,914 & 611 & \$0.0047 & 20 & N/A, N/A & False \\
+4 & 37\,641 & 85\,932 & 85\,606 & 326 & \$0.0221 & 20 & N/A, N/A & False \\
+5 & 23\,957 & 48\,465 & 48\,109 & 356 & \$0.0127 & 20 & N/A, N/A & False \\
+6 & 24\,484 & 66\,743 & 66\,333 & 410 & \$0.0174 & 20 & N/A, N/A & False \\
+7 & 20\,700 & 20\,186 & 19\,645 & 541 & \$0.0060 & 18 & DENW39AL10001pyT, 14.937m & False \\
+8 & 25\,463 & 55\,026 & 54\,660 & 366 & \$0.0144 & 20 & N/A, N/A & False \\
+9 & 20\,091 & 20\,941 & 20\,460 & 481 & \$0.0061 & 20 & N/A, N/A & False \\
+10 & 24\,083 & 34\,367 & 33\,930 & 437 & \$0.0094 & 20 & N/A, N/A & False \\
+11 & 24\,747 & 33\,892 & 33\,412 & 480 & \$0.0093 & 20 & N/A, N/A & False \\
+12 & 22\,535 & 20\,142 & 19\,742 & 400 & \$0.0057 & 20 & N/A, N/A & False \\
+13 & 25\,245 & 54\,951 & 54\,570 & 381 & \$0.0144 & 20 & N/A, N/A & False \\
+14 & 42\,182 & 75\,504 & 75\,178 & 326 & \$0.0194 & 20 & N/A, N/A & False \\
+15 & 25\,933 & 25\,987 & 25\,512 & 475 & \$0.0073 & 20 & N/A, N/A & False \\
+16 & 25\,033 & 27\,976 & 27\,470 & 506 & \$0.0079 & 20 & N/A, N/A & False \\
+17 & 36\,876 & 40\,777 & 40\,375 & 402 & \$0.0109 & 19 & DENW39AL10001pyT, 14.937m & False \\
+18 & 4\,714 & 9\,294 & 9\,206 & 88 & \$0.0025 & 3 & DENW39AL10001pyT, 14.937m & False \\
+19 & 24\,774 & 33\,441 & 32\,894 & 547 & \$0.0093 & 20 & N/A, N/A & False \\
+20 & 48\,989 & 57\,974 & 57\,572 & 402 & \$0.0152 & 20 & N/A, N/A & False \\
+\hline
+Avg. & 26\,997 & 38\,437 & 37\,993 & 444 & \$0.0104 & 19 & DENW39AL10001p9r, 19.124m & -- \\
+Total & -- & 768\,751 & 759\,862 & 8\,889 & \$0.2077 & 380 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - highest\_measured\_height - Outputs (2026-02-07)}
+\label{tab:mcp\_highest\_measured\_height\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 &  \\
+2 &  \\
+3 &  \\
+4 &  \\
+5 &  \\
+6 &  \\
+7 & \{"building\_id":"DENW39AL10001pyT","measuredHeight":14.937,"missing\_count":12\} \\
+8 &  \\
+9 &  \\
+10 &  \\
+11 &  \\
+12 &  \\
+13 &  \\
+14 &  \\
+15 &  \\
+16 &  \\
+17 & \{"building\_id":"DENW39AL10001pyT","measuredHeight":14.937,"missing\_count":10\} \\
+18 & \{"building\_id":"DENW39AL10001pyT","measuredHeight":14.937,"missing\_count":10\} \\
+19 &  \\
+20 &  \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{roof\_volume\_sum}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Metrics (2026-02-07)}
+\label{tab:mcp\_roof\_volume\_sum\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & 407.725 m³ & -- \\
+1 & 23\,907 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+2 & 24\,646 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+3 & 21\,450 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+4 & 24\,750 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+5 & 21\,724 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+6 & 23\,597 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+7 & 26\,187 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+8 & 23\,478 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+9 & 23\,806 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+10 & 22\,972 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+11 & 21\,764 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+12 & 24\,477 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+13 & 22\,731 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+14 & 21\,107 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+15 & 22\,141 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+16 & 21\,849 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+17 & 24\,340 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+18 & 24\,984 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+19 & 22\,796 & 4\,053 & 3\,467 & 586 & \$0.0020 & 20 & N/A & False \\
+20 & 14\,705 & 11\,089 & 10\,502 & 587 & \$0.0038 & 20 & N/A & False \\
+\hline
+Avg. & 22\,870 & 4\,404 & 3\,818 & 586 & \$0.0021 & 20 & 407.725 m³ & -- \\
+Total & -- & 88\,096 & 76\,375 & 11\,721 & \$0.0425 & 400 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - roof\_volume\_sum - Outputs (2026-02-07)}
+\label{tab:mcp\_roof\_volume\_sum\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 &  \\
+2 &  \\
+3 &  \\
+4 &  \\
+5 &  \\
+6 &  \\
+7 &  \\
+8 &  \\
+9 &  \\
+10 &  \\
+11 &  \\
+12 &  \\
+13 &  \\
+14 &  \\
+15 &  \\
+16 &  \\
+17 &  \\
+18 &  \\
+19 &  \\
+20 &  \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{raise\_tallest\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Metrics (2026-02-07)}
+\label{tab:mcp\_raise\_tallest\_building\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10001p9r, 21.124m & -- \\
+1 & 15\,670 & 4\,241 & 3\,719 & 522 & \$0.0020 & 8 & DENW39AL10001p9r, N/A & False \\
+2 & 14\,214 & 4\,128 & 3\,643 & 485 & \$0.0019 & 7 & DENW39AL10001p9r, N/A & False \\
+3 & 11\,862 & 3\,772 & 3\,386 & 386 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+4 & 11\,315 & 3\,812 & 3\,414 & 398 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+5 & 10\,250 & 3\,770 & 3\,383 & 387 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+6 & 12\,586 & 4\,129 & 3\,627 & 502 & \$0.0019 & 7 & DENW39AL10001p9r, N/A & False \\
+7 & 12\,605 & 3\,807 & 3\,399 & 408 & \$0.0017 & 6 & DENW39AL10001p9r, N/A & False \\
+8 & 11\,189 & 3\,784 & 3\,375 & 409 & \$0.0017 & 6 & DENW39AL10001p9r, N/A & False \\
+9 & 9\,499 & 3\,779 & 3\,384 & 395 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+10 & 12\,660 & 3\,782 & 3\,382 & 400 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+11 & 13\,358 & 4\,074 & 3\,596 & 478 & \$0.0019 & 7 & DENW39AL10001p9r, N/A & False \\
+12 & 10\,622 & 3\,825 & 3\,408 & 417 & \$0.0017 & 6 & DENW39AL10001p9r, N/A & False \\
+13 & 13\,330 & 3\,857 & 3\,436 & 421 & \$0.0017 & 6 & DENW39AL10001p9r, 21.124m & True \\
+14 & 12\,281 & 3\,744 & 3\,356 & 388 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+15 & 9\,793 & 3\,797 & 3\,397 & 400 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+16 & 10\,924 & 3\,815 & 3\,421 & 394 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+17 & 16\,290 & 4\,147 & 3\,650 & 497 & \$0.0019 & 7 & DENW39AL10001p9r, N/A & False \\
+18 & 13\,879 & 4\,067 & 3\,569 & 498 & \$0.0019 & 7 & DENW39AL10001p9r, N/A & False \\
+19 & 10\,165 & 3\,796 & 3\,394 & 402 & \$0.0017 & 6 & DENW39AL10001p9r, N/A & False \\
+20 & 12\,783 & 3\,840 & 3\,449 & 391 & \$0.0016 & 6 & DENW39AL10001p9r, N/A & False \\
+\hline
+Avg. & 12\,263 & 3\,898 & 3\,469 & 428 & \$0.0017 & 6 & DENW39AL10001p9r, 21.124m & -- \\
+Total & -- & 77\,966 & 69\,388 & 8\,578 & \$0.0345 & 127 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Outputs (2026-02-07)}
+\label{tab:mcp\_raise\_tallest\_building\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & Die Änderung wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID:** DENW39AL10001p9r
+- **Alte measuredHeight:** 19.124 m
+- **Neue measuredHeight:** 21.124 m
+- **Das Dataset wurde erfolgreich gespeichert.**
+
+Der aktuelle Zustand des Datasets ist in der Datei **evaluation.city.json** gespeichert. \\
+2 & Die Änderung wurde erfolgreich vorgenommen und das Dataset gespeichert. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight:** 19.124 m
+- **Neue measuredHeight:** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, das Dataset wurde erfolgreich gespeichert. \\
+3 & Die Änderungen wurden erfolgreich durchgeführt und das Dataset wurde gespeichert. 
+
+**Bestätigung:**
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight:** 19.124 m
+- **Neue measuredHeight:** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, das Dataset wurde erfolgreich gespeichert. \\
+4 & Die Modifikation wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, das Dataset wurde erfolgreich gespeichert.
+
+Alle Änderungen sind nun im Dataset reflektiert. \\
+5 & Die Änderung wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID**: DENW39AL10001p9r
+- **Alte measuredHeight**: 19.124 m
+- **Neue measuredHeight**: 21.124 m
+- **Änderung gespeichert**: Ja, das Dataset wurde erfolgreich in `evaluation.city.json` gespeichert. \\
+6 & Die Änderung wurde erfolgreich durchgeführt. Hier sind die Bestätigungen:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, das Dataset wurde erfolgreich gespeichert. \\
+7 & Die Modifikation wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID**: DENW39AL10001p9r
+- **Alte measuredHeight**: 19.124m
+- **Neue measuredHeight**: 21.124m
+- **Änderung erfolgreich gespeichert**: Ja, das Dataset wurde erfolgreich in `evaluation.city.json` gespeichert.
+
+Die Änderung ist somit vollständig und korrekt dokumentiert. \\
+8 & Die Modifikation wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, das Dataset wurde erfolgreich gespeichert.
+
+Die Datei wurde unter dem Namen `evaluation.city.json` aktualisiert. \\
+9 & Die Änderung wurde erfolgreich durchgeführt und das Dataset gespeichert. Hier sind die Details:
+
+- **Building-ID**: DENW39AL10001p9r
+- **Alte measuredHeight**: 19.124m
+- **Neue measuredHeight**: 21.124m
+- **Änderung erfolgreich gespeichert**: Ja
+
+Das Dataset ist unter dem Namen `evaluation.city.json` erfolgreich gespeichert worden. \\
+10 & Die Änderungen wurden erfolgreich durchgeführt und gespeichert. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes**: DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung)**: 19.124m
+- **Neue measuredHeight (nach der Änderung)**: 21.124m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde**: Ja, die Änderung wurde erfolgreich gespeichert. \\
+11 & Die Änderungen wurden erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID**: DENW39AL10001p9r
+- **Alte measuredHeight**: 19.124 m
+- **Neue measuredHeight**: 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde**: Ja, das Dataset wurde erfolgreich gespeichert. \\
+12 & Die Änderungen wurden erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, die Änderungen wurden erfolgreich gespeichert. 
+
+Das Dataset wurde in der Datei **evaluation.city.json** aktualisiert. \\
+13 & Die Änderungen wurden erfolgreich durchgeführt und gespeichert. Hier sind die Bestätigungen:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, die Änderungen wurden erfolgreich gespeichert. \\
+14 & Die Änderung wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, das Dataset wurde erfolgreich in `evaluation.city.json` gespeichert. \\
+15 & - **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124m
+- **Neue measuredHeight (nach der Änderung):** 21.124m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, das Dataset wurde erfolgreich in `evaluation.city.json` gespeichert. \\
+16 & Die Modifikation wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID**: DENW39AL10001p9r
+- **Alte measuredHeight**: 19.124 m
+- **Neue measuredHeight**: 21.124 m
+- **Änderung erfolgreich gespeichert**: Ja, das Dataset wurde in der Datei `evaluation.city.json` gespeichert. 
+
+Alle Änderungen sind jetzt im Dataset dokumentiert. \\
+17 & Die Modifikation wurde erfolgreich durchgeführt und gespeichert. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, die Änderung wurde erfolgreich gespeichert. \\
+18 & Die Änderung wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes:** DENW39AL10001p9r
+- **Alte measuredHeight (vor der Änderung):** 19.124 m
+- **Neue measuredHeight (nach der Änderung):** 21.124 m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde:** Ja, das Dataset wurde erfolgreich gespeichert. 
+
+Die Änderungen sind jetzt in der Datei **evaluation.city.json** enthalten. \\
+19 & Die Änderung wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID des modifizierten Gebäudes**: DENW39AL10001p9r
+- **Alte measuredHeight**: 19.124m
+- **Neue measuredHeight**: 21.124m
+- **Ob die Änderung erfolgreich im Dataset gespeichert wurde**: Ja, Dataset erfolgreich in evaluation.city.json gespeichert.
+
+Jetziger Status des Gebäudes ist aktualisiert. \\
+20 & Die Modifikation wurde erfolgreich durchgeführt. Hier sind die Details:
+
+- **Building-ID**: DENW39AL10001p9r
+- **Alte measuredHeight**: 19.124 m
+- **Neue measuredHeight**: 21.124 m
+- **Änderung erfolgreich gespeichert**: Ja
+
+Das Dataset wurde erfolgreich in "evaluation.city.json" gespeichert. \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+\subsection{add\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Metrics (2026-02-07)}
+\label{tab:mcp\_add\_building\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & EVAL\_TEST\_BUILDING\_001 & -- \\
+1 & 13\,139 & 3\,640 & 3\,231 & 409 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+2 & 13\,149 & 3\,601 & 3\,233 & 368 & \$0.0015 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+3 & 8\,624 & 3\,631 & 3\,233 & 398 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+4 & 8\,521 & 3\,645 & 3\,232 & 413 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+5 & 10\,290 & 3\,612 & 3\,233 & 379 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+6 & 10\,057 & 4\,167 & 3\,652 & 515 & \$0.0019 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+7 & 13\,210 & 4\,119 & 3\,581 & 538 & \$0.0020 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+8 & 10\,035 & 3\,615 & 3\,233 & 382 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+9 & 9\,624 & 3\,622 & 3\,233 & 389 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+10 & 9\,574 & 3\,609 & 3\,233 & 376 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+11 & 12\,039 & 4\,007 & 3\,491 & 516 & \$0.0019 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+12 & 10\,646 & 3\,631 & 3\,232 & 399 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+13 & 10\,487 & 3\,591 & 3\,218 & 373 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+14 & 10\,812 & 4\,315 & 3\,784 & 531 & \$0.0020 & 5 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+15 & 9\,692 & 3\,609 & 3\,233 & 376 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+16 & 9\,667 & 3\,635 & 3\,231 & 404 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+17 & 8\,992 & 3\,609 & 3\,220 & 389 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+18 & 10\,206 & 3\,618 & 3\,233 & 385 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+19 & 11\,744 & 3\,621 & 3\,233 & 388 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+20 & 10\,932 & 3\,624 & 3\,233 & 391 & \$0.0016 & 4 & EVAL\_TEST\_BUILDING\_001, height 10.5 & True \\
+\hline
+Avg. & 10\,572 & 3\,726 & 3\,310 & 415 & \$0.0017 & 4 & EVAL\_TEST\_BUILDING\_001 & -- \\
+Total & -- & 74\,521 & 66\,202 & 8\,319 & \$0.0332 & 84 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - add\_building - Outputs (2026-02-07)}
+\label{tab:mcp\_add\_building\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & Das neue Gebäude wurde erfolgreich erstellt und gespeichert. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Gemessene Höhe (measuredHeight):** 10.5 m
+- **Dachtyp:** 1030 (Satteldach)
+- **Funktion:** 31001\_1010 (Wohngebäude)
+- **Stockwerke über Grund:** 3
+- **Gespeichert in:** evaluation.city.json (insgesamt 37 Gebäude)
+
+Das Dataset wurde erfolgreich mit der Beschreibung "Neues Gebäude EVAL\_TEST\_BUILDING\_001 hinzugefügt" gespeichert. \\
+2 & Das Gebäude wurde erfolgreich hinzugefügt. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Measured Height:** 10.5 m
+- **Stockwerke über Grund:** 3
+- **Dachtyp:** 1030 (Satteldach)
+- **Funktion:** 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich gespeichert. \\
+3 & Das Gebäude wurde erfolgreich hinzugefügt. Hier sind die Details:
+
+- **Building-ID**: EVAL\_TEST\_BUILDING\_001
+- **Gemessene Höhe (measuredHeight)**: 10.5 m
+- **Anzahl der Stockwerke über Grund (storeysAboveGround)**: 3
+- **Dachtyp (roofType)**: 1030 (Satteldach)
+- **Funktion (function)**: 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich gespeichert und enthält nun 37 Gebäude. \\
+4 & Das Gebäude wurde erfolgreich hinzugefügt und das Dataset gespeichert. Hier sind die Details:
+
+- **Building-ID:** `EVAL\_TEST\_BUILDING\_001`
+- **Gemessene Höhe (measuredHeight):** 10.5m
+- **Stockwerke über Grund (storeysAboveGround):** 3
+- **Dachtyp (roofType):** '1030' (Satteldach)
+- **Funktion (function):** '31001\_1010' (Wohngebäude)
+
+Das Dataset wurde erfolgreich in `evaluation.city.json` gespeichert. Es enthält jetzt insgesamt 37 Gebäude. \\
+5 & Das neue Gebäude wurde erfolgreich hinzugefügt. Hier sind die Details:
+
+- **Building-ID**: EVAL\_TEST\_BUILDING\_001
+- **Measured Height**: 10.5 m
+- **Storeys Above Ground**: 3
+- **Roof Type**: 1030 (Satteldach)
+- **Function**: 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich gespeichert und enthält nun insgesamt 37 Gebäude. \\
+6 & Das Gebäude wurde erfolgreich zum Dataset hinzugefügt. Hier sind die Details:
+
+- **Building-ID:** `EVAL\_TEST\_BUILDING\_001`
+- **Measured Height:** 10.5 m
+- **Stockwerke über Grund:** 3
+- **Dachtyp:** `1030` (Satteldach)
+- **Funktion:** `31001\_1010` (Wohngebäude)
+
+Das Dataset wurde erfolgreich gespeichert. Es enthält nun insgesamt 37 Gebäude. \\
+7 & Das Gebäude wurde erfolgreich hinzugefügt und das Dataset gespeichert. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Gemessene Höhe (measuredHeight):** 10.5 m
+- **Anzahl der Stockwerke über Grund (storeysAboveGround):** 3
+- **Dachtyp (roofType):** 1030 (Satteldach)
+- **Funktion:** 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich in `evaluation.city.json` gespeichert und enthält nun insgesamt 37 Gebäude. \\
+8 & Das neue Gebäude wurde erfolgreich hinzugefügt. Hier sind die Details:
+
+- **Building-ID**: EVAL\_TEST\_BUILDING\_001
+- **Measured Height**: 10.5 m
+- **Storeys Above Ground**: 3
+- **Roof Type**: 1030 (Satteldach)
+- **Function**: 31001\_1010 (Wohngebäude)
+
+Zusätzlich wurde das Dataset erfolgreich gespeichert und enthält nun insgesamt **37 Gebäude**. \\
+9 & Das neue Gebäude wurde erfolgreich zum Dataset hinzugefügt. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Gemessene Höhe:** 10.5 m
+- **Stockwerke über Grund:** 3
+- **Dachtyp:** 1030 (Satteldach)
+- **Funktion:** 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich in der Datei **evaluation.city.json** gespeichert, jetzt mit insgesamt 37 Gebäuden. \\
+10 & Das Gebäude wurde erfolgreich erstellt und zum Dataset hinzugefügt. Hier sind die Details:
+
+- **Building-ID**: EVAL\_TEST\_BUILDING\_001
+- **Measured Height**: 10.5 m
+- **Storeys Above Ground**: 3
+- **Roof Type**: 1030 (Satteldach)
+- **Function**: 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich gespeichert.  \\
+11 & Das neue Gebäude wurde erfolgreich hinzugefügt. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **measuredHeight:** 10.5 m
+- **storeysAboveGround:** 3
+- **roofType:** 1030 (Satteldach)
+- **function:** 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich in `evaluation.city.json` gespeichert. Es enthält nun 37 Gebäude. \\
+12 & Das Gebäude wurde erfolgreich erstellt und hinzugefügt. Hier ist die Zusammenfassung:
+
+- **Building-ID**: EVAL\_TEST\_BUILDING\_001
+- **Gemessene Höhe (measuredHeight)**: 10.5 m
+- **Stockwerke über Grund (storeysAboveGround)**: 3
+- **Dachtyp (roofType)**: 1030 (Satteldach)
+- **Funktion**: 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich gespeichert und enthält jetzt insgesamt 37 Gebäude. \\
+13 & \#\#\# Zusammenfassung des erstellten Gebäudes:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Measured Height:** 10.5 m
+- **Stockwerke über Grund:** 3
+- **Dachtyp:** 1030 (Satteldach)
+- **Funktion:** 31001\_1010 (Wohngebäude)
+
+\#\#\# Speicherung:
+- Das Dataset wurde erfolgreich gespeichert und enthält jetzt insgesamt 37 Gebäude. \\
+14 & Das Gebäude wurde erfolgreich erstellt und hinzugefügt. Hier sind die Details:
+
+- **Building-ID**: EVAL\_TEST\_BUILDING\_001
+- **Measured Height**: 10.5 m
+- **Stockwerke über Grund**: 3
+- **Dachtyp**: 1030 (Satteldach)
+- **Funktion**: 31001\_1010 (Wohngebäude)
+
+\#\#\# Bestätigung:
+- Das Gebäude wurde erfolgreich zum Dataset hinzugefügt.
+- Das Dataset wurde erfolgreich in `evaluation.city.json` gespeichert, jetzt mit insgesamt 37 Gebäuden. \\
+15 & Das Gebäude wurde erfolgreich zum Dataset hinzugefügt. Hier sind die Details des erstellten Gebäudes:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Measured Height:** 10.5m
+- **Storeys Above Ground:** 3
+- **Roof Type:** 1030 (Satteldach)
+- **Function:** 31001\_1010 (Wohngebäude)
+
+Zusätzlich wurde das Dataset erfolgreich gespeichert. \\
+16 & Das neue Gebäude wurde erfolgreich erstellt und zum Dataset hinzugefügt. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Gemessene Höhe (measuredHeight):** 10.5 m
+- **Stockwerke über Grund (storeysAboveGround):** 3
+- **Dachtyp (roofType):** 1030 (Satteldach)
+- **Funktion:** 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich in der Datei **evaluation.city.json** gespeichert und enthält nun insgesamt **37 Gebäude**. \\
+17 & Das neue Gebäude wurde erfolgreich zum Dataset hinzugefügt. Hier sind die Details:
+
+- **Building-ID**: EVAL\_TEST\_BUILDING\_001
+- **Attribute**:
+  - **Measured Height**: 10.5m
+  - **Storeys Above Ground**: 3
+  - **Roof Type**: 1030 (Satteldach)
+  - **Function**: 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich gespeichert. Es enthält jetzt insgesamt 37 Gebäude. \\
+18 & Das neue Gebäude wurde erfolgreich erstellt und zum Dataset hinzugefügt. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Measured Height:** 10.5 m
+- **Storeys Above Ground:** 3
+- **Roof Type:** 1030 (Satteldach)
+- **Function:** 31001\_1010 (Wohngebäude)
+
+Zusätzlich wurde das Dataset erfolgreich gespeichert, und die Gesamtanzahl der Gebäude beträgt nun 37. \\
+19 & Das Gebäude wurde erfolgreich zum Dataset hinzugefügt. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Measured Height:** 10.5 m
+- **Stockwerke über Grund:** 3
+- **Dachtyp:** 1030 (Satteldach)
+- **Funktion:** 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich gespeichert in der Datei **evaluation.city.json**. Aktuelle Anzahl der Gebäude: **37**. \\
+20 & Das neue Gebäude wurde erfolgreich erstellt und zum Dataset hinzugefügt. Hier sind die Details:
+
+- **Building-ID:** EVAL\_TEST\_BUILDING\_001
+- **Measured Height:** 10.5 m
+- **Stockwerke über Grund:** 3
+- **Dachtyp:** 1030 (Satteldach)
+- **Funktion:** 31001\_1010 (Wohngebäude)
+
+Das Dataset wurde erfolgreich in der Datei `evaluation.city.json` gespeichert. Insgesamt sind jetzt 37 Gebäude im Dataset vorhanden. \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}

@@ -1,0 +1,173 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\title{Evaluation Results}
+\date{07.02.2026, 21:20 Uhr}
+
+\begin{document}
+\maketitle
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Model & gpt-5-mini \\
+Reasoning Effort & medium \\
+Date & 07.02.2026, 21:20 Uhr \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\tableofcontents
+\clearpage
+
+\section{mcp}
+
+\subsection{raise\_tallest\_building}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Metrics (2026-02-07)}
+\label{tab:mcp\_raise\_tallest\_building\_metrics\_2026-02-07}
+\begin{tabular}{r r r r r r r p{3cm} l}
+\hline
+Run & Dur. & Tok. Total & Tok. In & Tok. Out & Cost & Calls & Result & Success \\
+\hline
+\textbf{Ground Truth} & -- & -- & -- & -- & -- & -- & DENW39AL10003ztT, 47.953m & -- \\
+\hline
+1 & 28\,755 & 6\,824 & 5\,047 & 1\,777 & \$0.0048 & 7 & DENW39AL10003ztT, N/A & False \\
+2 & 23\,600 & 6\,255 & 4\,668 & 1\,587 & \$0.0043 & 6 & DENW39AL10003ztT, N/A & False \\
+3 & 28\,918 & 7\,150 & 5\,156 & 1\,994 & \$0.0053 & 7 & DENW39AL10003ztT, N/A & False \\
+4 & 35\,534 & 6\,893 & 4\,911 & 1\,982 & \$0.0052 & 7 & DENW39AL10003ztT, N/A & False \\
+5 & 28\,888 & 6\,422 & 4\,729 & 1\,693 & \$0.0046 & 6 & DENW39AL10003ztT, N/A & False \\
+6 & 21\,309 & 5\,913 & 4\,541 & 1\,372 & \$0.0039 & 7 & DENW39AL10003ztT, N/A & False \\
+7 & 30\,239 & 6\,977 & 5\,133 & 1\,844 & \$0.0050 & 8 & DENW39AL10003ztT, N/A & False \\
+8 & 30\,142 & 5\,931 & 4\,285 & 1\,646 & \$0.0044 & 5 & DENW39AL10003ztT, N/A & False \\
+\hline
+Avg. & 28\,423 & 6\,545 & 4\,808 & 1\,736 & \$0.0047 & 6 & DENW39AL10003ztT, 47.953m & -- \\
+Total & -- & 52\,365 & 38\,470 & 13\,895 & \$0.0374 & 53 & -- & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\caption{MCP Server - raise\_tallest\_building - Outputs (2026-02-07)}
+\label{tab:mcp\_raise\_tallest\_building\_outputs\_2026-02-07}
+\begin{tabular}{r p{12cm}}
+\hline
+Run & Output \\
+\hline
+1 & Änderung durchgeführt und gespeichert.
+
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight: 19.124 m
+- Neue measuredHeight: 21.124 m
+- Dataset gespeichert: Ja — evaluation.city.json (Änderung erfolgreich gespeichert)
+
+Zusätzliche Informationen:
+- Snapshot vor der Änderung erstellt (Index 1). \\
+2 & Änderung ausgeführt und gespeichert.
+
+Bestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight: 19.124 m
+- Neue measuredHeight: 21.124 m
+- Änderung im Dataset gespeichert: Ja (evaluation.city.json, 36 Gebäude) \\
+3 & Die Änderung wurde durchgeführt und das Dataset gespeichert.
+
+Bestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight: 19.124 m
+- Neue measuredHeight: 21.124 m
+- Dataset gespeichert: Ja — Datei "evaluation.city.json" erfolgreich gespeichert (36 Gebäude), Pfad: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json
+
+Zusatz: Vor der Änderung wurde ein Snapshot erstellt (Snapshot 1). \\
+4 & Änderung durchgeführt und Dataset gespeichert.
+
+Kurzprotokoll:
+- Dataset geladen: evaluation.city.json (36 Gebäude)
+- Snapshot vor Änderung erstellt: Snapshot 1
+- Gebäude gefunden: gml:id = DENW39AL10001p9r
+- Alte measuredHeight: 19.124 m
+- Neue measuredHeight: 21.124 m
+- Zusätzliche Felder (falls zuvor null) wurden mit validen Standardwerten gesetzt, damit die Änderung akzeptiert wurde:
+  - roof\_height: 0.0
+  - usage: "" (leerer String)
+  - year\_of\_construction: 0
+  - storeys\_above\_ground: 0
+  ... \\
+5 & Fertig — die Änderung wurde durchgeführt und gespeichert.
+
+Bestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 19.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Speicherung im Dataset: Erfolgreich — evaluation.city.json wurde gespeichert (36 Gebäude). Timestamp: 2026-02-07 21:22:57. Filepath: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json \\
+6 & Änderung durchgeführt und gespeichert.
+
+Details:
+- Dataset geladen: evaluation.city.json
+- Durchgeführte Änderung: measuredHeight des Gebäudes erhöht um 2.000 m (von 19.124 m auf 21.124 m)
+- Speicheraktion: Dataset erfolgreich gespeichert (evaluation.city.json)
+
+Bestätigung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 19.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Änderung im Dataset gespeichert: Ja (evaluation.city.json, 36 Gebäude) \\
+7 & Änderung durchgeführt und gespeichert.
+
+Kurzübersicht:
+- Dataset geladen: evaluation.city.json
+- Snapshot vor Änderung erstellt: Snapshot 1
+
+Bestätigung der Änderung:
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor der Änderung): 19.124 m
+- Neue measuredHeight (nach der Änderung): 21.124 m
+- Dataset gespeichert: Ja — evaluation.city.json wurde erfolgreich gespeichert (36 Gebäude)
+
+Hinweis: Um die measuredHeight zu setzen, wurden zusätzlich für dieses Gebäude gültige Platzhalterwerte f... \\
+8 & Änderung durchgeführt und Dataset gespeichert.
+
+Details:
+- Dataset geladen: evaluation.city.json (36 Gebäude)
+- Building-ID: DENW39AL10001p9r
+- Alte measuredHeight (vor Änderung): 19.124 m
+- Neue measuredHeight (nach Änderung): 21.124 m
+- Speicherung: Erfolgreich gespeichert in evaluation.city.json
+  - Dateipfad: /Users/tammo/Documents/UNI/BA/mcp-server/data/datasets/evaluation.city.json
+  - Zeitstempel: 2026-02-07 21:24:14
+  - Bestätigung: "Dataset erfolgreich in evaluation.city.json gespeicher... \\
+\hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\end{document}
