@@ -9,6 +9,7 @@ import argparse
 import os
 import math
 import copy
+import warnings
 from datetime import datetime
 from citydpc.util.envelope import update_min_max_from_surface
 
@@ -24,6 +25,13 @@ from citydpc.core.output.cityjsonOutput import write_cityjson_file
 from citydpc.tools import cityBIT, cityATB, partywall
 input.set_roof_volume_calculation(True)
 
+# fastmcp's optional auth imports trigger authlib deprecation noise on stderr.
+# authlib registers an "always" filter on import, so ours has to come after it.
+try:
+    from authlib.deprecate import AuthlibDeprecationWarning
+    warnings.simplefilter("ignore", AuthlibDeprecationWarning)
+except ImportError:
+    pass
 from fastmcp import FastMCP
 from mcp.types import Icon
 
