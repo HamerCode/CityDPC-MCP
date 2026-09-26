@@ -57,7 +57,7 @@ async def main():
                 return result.data
 
             tools = await client.list_tools()
-            assert len(tools) == 18, len(tools)
+            assert len(tools) == 19, len(tools)
             assert SAMPLE.name in await call("list_datasets")
             assert "Erfolg" in await call("load_dataset", filename=SAMPLE.name)
 
@@ -98,8 +98,19 @@ async def main():
             await call("save_dataset")
             check_state("add_building", data)
 
+            # create_dataset: new empty file, add a building, save, reload
+            for name in ("new.city.json", "new.gml"):
+                assert "Erfolg" in await call("create_dataset", filename=name, title="smoke test")
+                assert await call("number_of_buildings") == 0
+                await call("create_building", id="B1", groundsCoordinates=NEW["groundCoordinates"],
+                           groundSurfaceHeight=0.0, geometryHeight=10.0, lod=1)
+                await call("save_dataset")
+                assert "Erfolg" in await call("load_dataset", filename=name)
+                assert await call("get_buiding_Id_list") == ["B1"]
+                assert "existiert bereits" in await call("create_dataset", filename=name)
+
     assert SAMPLE.read_bytes() == original, "sample dataset was modified"
-    print(f"PASS: 18 tools, {len(ids)} buildings, all 5 benchmark tasks validated, snapshot/rollback OK")
+    print(f"PASS: 19 tools, {len(ids)} buildings, all 5 benchmark tasks validated, snapshot/rollback and create_dataset OK")
 
 
 if __name__ == "__main__":

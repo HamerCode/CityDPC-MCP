@@ -352,6 +352,44 @@ def load_dataset(filename: str) -> str:
 
 
 @mcp.tool()
+def create_dataset(filename: str, title: str = None, epsg: int = 25832) -> str:
+    """Erstellt ein neues, leeres Dataset als GML- oder JSON-Datei und lädt es.
+
+    Praktisch zum Testen: Danach können direkt mit create_building() Gebäude hinzugefügt
+    und mit save_dataset() gespeichert werden. Bestehende Dateien werden nicht überschrieben.
+
+    Args:
+        filename: Name der neuen Datei, Endung '.json' (CityJSON) oder '.gml' (CityGML), z.B. 'test.city.json'
+        title: Optionaler Titel des Datasets
+        epsg: EPSG-Code des Koordinatenreferenzsystems (Standard: 25832 = ETRS89 / UTM 32N)
+
+    Returns:
+        str: Erfolgsmeldung oder Fehlermeldung
+    """
+    target_path = DATASET_DIR / filename
+
+    if not (_isgml_file(filename) or _isjson_file(filename)):
+        return f"Fehler: Ungültige Dateiendung '{filename}'. Erlaubt: '.json', '.gml'."
+    if target_path.exists():
+        return f"Fehler: Datei '{filename}' existiert bereits. Bitte load_dataset() verwenden."
+
+    try:
+        new_dataset = Dataset(title=title)
+        new_dataset.srsName = f"http://www.opengis.net/def/crs/EPSG/0/{epsg}"
+        if _isgml_file(filename):
+            write_citygml_file(new_dataset, str(target_path), version="2.0")
+        else:
+            write_cityjson_file(new_dataset, str(target_path), version="2.0")
+    except Exception as e:
+        return f"Fehler beim Erstellen von '{filename}': {str(e)}"
+
+    result = load_dataset.fn(filename)
+    if result.startswith("Fehler"):
+        return result
+    return f"Erfolg: Neues leeres Dataset '{filename}' erstellt und geladen."
+
+
+@mcp.tool()
 def filter_dataset(addressRestriciton: dict = None, borderCoordinates: list = None) -> dict:
     """Filtert das Dataset nach Adressen oder Koordinaten und setzt das gefilterte Dataset als aktives Dataset.
 
