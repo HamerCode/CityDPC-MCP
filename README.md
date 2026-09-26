@@ -20,7 +20,7 @@ This puts a `citydpc-mcp` command on your `PATH`. The server communicates over s
 
 ```bash
 claude mcp add citydpc -- citydpc-mcp --dataset-dir /absolute/path/to/your/data
-claude mcp list          # should show: citydpc ... ✓ Connected
+claude mcp list          # should show: citydpc: citydpc-mcp ... - ✔ Connected
 ```
 
 Add `--scope user` to make the server available in all projects. If you leave out `--dataset-dir`, the server uses the project directory Claude Code was started in.
