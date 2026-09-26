@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "citydpc-mcp"
+version = "1.0.0"
+description = "MCP server for inspecting, analysing and editing CityJSON/CityGML building models with CityDPC"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+authors = [{ name = "Tammo Hamer" }]
+dependencies = [
+    # CityDPC v0.1.22 (not on PyPI); pinned to the exact commit used in the paper.
+    "citydpc @ git+https://github.com/RWTH-E3D/CityDPC@4ede6d737dd3f9ca1c50c67cdd495e7c99de58da",
+    "fastmcp==2.14.3",
+    "mcp>=1.23.1,<2",
+]
+
+[project.optional-dependencies]
+eval = [
+    "httpx>=0.28,<1",
+    "python-dotenv>=1,<2",
+]
+
+[project.scripts]
+citydpc-mcp = "citydpc_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/HamerCode/CityDPC-MCP"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/citydpc_mcp"]

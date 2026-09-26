@@ -1,13 +1,8 @@
 .venv/
 __pycache__/
 *.py[cod]
-.env
-.env.*
-!.env.example
-**/codex_oauth.json
+*.egg-info/
 .DS_Store
 .idea/
-*.egg-info/
-*.log
-evaluation/evaluation_logs/
-evaluation/dataset_backups/
+.env
+evaluation/logs/

@@ -1,7 +1,0 @@
--e ./CityDPC
-fastmcp==2.14.3
-mcp[cli]>=1.23.1,<2
-httpx>=0.28,<1
-python-dotenv>=1,<2
-openai>=1
-seaborn>=0.13,<1
