@@ -64,12 +64,12 @@ Point the server at the sample dataset ([`evaluation/data/evaluation.city.json`]
 
 | Group | Tools |
 |---|---|
-| Datasets | `list_datasets`, `load_dataset`, `filter_dataset` (by address or bounding polygon), `save_dataset` (CityJSON or CityGML) |
+| Datasets | `list_datasets`, `load_dataset`, `create_dataset` (new empty file), `filter_dataset` (by address or bounding polygon), `save_dataset` (CityJSON or CityGML) |
 | Analysis | `analyse_dataset`, `number_of_buildings`, `get_buiding_Id_list`, `get_all_buildings`, `get_building_by_id`, `get_party_walls`, `calculate_roof_volume_by_id` |
 | Editing | `create_building` (LoD 0/1/2 with roof types), `remove_building_from_dataset`, `enrich_building`, `remove_building_attributes` |
 | Versioning | `take_snapshot`, `rollback_to_snapshot`, `get_dataset_history` |
 
-All edits happen in memory until `save_dataset` is called. The tool names and their (German) descriptions are exactly the ones evaluated in the paper, including the historical spelling `get_buiding_Id_list`. See [`src/citydpc_mcp/server.py`](src/citydpc_mcp/server.py) for signatures.
+All edits happen in memory until `save_dataset` is called. The paper evaluated the other 18 tools; `create_dataset` was added afterwards for quick testing. Their names and (German) descriptions are unchanged, including the historical spelling `get_buiding_Id_list`. See [`src/citydpc_mcp/server.py`](src/citydpc_mcp/server.py) for signatures.
 
 ## Evaluation
 
@@ -130,7 +130,7 @@ uv run python tests/smoke_test.py
 ## Repository layout
 
 ```
-src/citydpc_mcp/server.py   MCP server (18 tools)
+src/citydpc_mcp/server.py   MCP server (19 tools)
 evaluation/
   cases.py, schemas.py      task prompts and answer schemas
   run.py, client.py         benchmark runner and OpenAI-compatible tool-calling client
